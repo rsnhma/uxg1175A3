@@ -2,13 +2,14 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - player
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - ground
   - Water
   - UI
   - 
@@ -41,3 +42,17 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: background
+    uniqueID: 3966584101
+    locked: 0
+  - name: tilemap
+    uniqueID: 3442519393
+    locked: 0
+  - name: player
+    uniqueID: 2372385077
+    locked: 0
+  - name: UI
+    uniqueID: 3999877109
+    locked: 0
+  m_RenderingLayers:
+  - Default
