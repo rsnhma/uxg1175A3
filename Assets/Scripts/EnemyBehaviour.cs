@@ -10,7 +10,7 @@ public class EnemyBehaviour : MonoBehaviour
     public float damageToPlayer;
     public string behavior;
 
-    private Transform player; //TBC Brian's part, need sync up
+    private Transform player;     //TBC Brian's part, need sync up
     public void Initialize(EnemyData data)
     {
         enemyId = data.id;

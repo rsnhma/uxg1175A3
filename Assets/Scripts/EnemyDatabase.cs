@@ -8,11 +8,11 @@ public class EnemyDatabase : MonoBehaviour
     void Awake()
     {
         TextAsset jsonText = Resources.Load<TextAsset>("enemies"); // loads Resources/enemies.json
-        enemyList = JsonUtility.FromJson<Wrapper>(FixJson(jsonText.text)).enemies;
+        enemyList = JsonUtility.FromJson<Wrapper>(FixJson(jsonText.text)).enemies; // loads and parses the enemies.json file into a List<EnemyData> by wrapping the array in an object
     }
 
     [System.Serializable]
-    // Wrapper's job is to match the structure of the enemy JSON file
+    // wrapper's job is to match the structure of the enemy JSON file
     private class Wrapper
     {
         public List<EnemyData> enemies;
