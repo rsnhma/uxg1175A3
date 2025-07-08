@@ -15,7 +15,7 @@ public class Potion : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             // Assuming enemy has a Health script
-            other.GetComponent<EnemyHealth>()?.TakeDamage(damage);
+            //other.GetComponent<EnemyHealth>()?.TakeDamage(damage);
             Destroy(gameObject);  // Destroy potion on hit
         }
     }
