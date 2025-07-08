@@ -18,8 +18,8 @@ EditorBuildSettings:
     path: Assets/Scenes/CharWeapSelection.unity
     guid: 5cbf965f7d9b01840a656503d128edec
   - enabled: 1
-    path: Assets/level 1 test.unity
-    guid: 6f2032572d899014d9d25f72d3bf35a3
+    path: Assets/Scenes/MainGame.unity
+    guid: 83002a67e34ebb943a60e566f169b2a9
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

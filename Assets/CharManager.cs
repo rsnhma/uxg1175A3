@@ -32,7 +32,8 @@ public class CharManager : MonoBehaviour
     }
     public void PlayGame()
     {
-        PrefabUtility.SaveAsPrefabAsset(playerchar, "Assets/selectedchar.prefab");
+        Debug.Log("seleted sprite" + selectedchar);
+        PrefabUtility.SaveAsPrefabAsset(playerchar, "Assets/Characters/selectedchar.prefab");
         SceneManager.LoadScene(4);
     }
 }
