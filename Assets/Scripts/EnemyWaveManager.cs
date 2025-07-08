@@ -57,7 +57,7 @@ public class EnemyWaveManager : MonoBehaviour
         }
 
         // Goblin/dog: wait until 1/3 HP before next wave
-        if (wave.enemyId == "goblin" || wave.enemyId == "dog")
+        if (wave.enemyId == "goblin" || wave.enemyId == "spider")
         {
             while (!CheckEnemyLowHealth(wave.enemyId, 0.33f))
             {
