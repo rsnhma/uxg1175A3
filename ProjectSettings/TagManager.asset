@@ -45,17 +45,23 @@ TagManager:
   - name: background
     uniqueID: 3966584101
     locked: 0
+  - name: decor under
+    uniqueID: 1246638363
+    locked: 0
+  - name: tilemap border under
+    uniqueID: 3999877109
+    locked: 0
   - name: tilemap
     uniqueID: 3442519393
     locked: 0
   - name: player
     uniqueID: 2372385077
     locked: 0
-  - name: enemy
-    uniqueID: 3482508157
+  - name: weapon
+    uniqueID: 3733494199
     locked: 0
-  - name: UI
-    uniqueID: 3999877109
+  - name: decor
+    uniqueID: 2614548343
     locked: 0
   m_RenderingLayers:
   - Default
