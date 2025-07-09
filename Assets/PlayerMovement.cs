@@ -9,25 +9,27 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 moveInput;
     private Vector2 lastMoveDir;
 
+    private Character3Ability speedAbility;
+
+    void Start()
+    {
+        speedAbility = GetComponent<Character3Ability>();
+    }
+
     void Update()
     {
-        // Get WASD or arrow input (no smoothing)
-        moveInput.x = Input.GetAxisRaw("Horizontal"); // A/D or Left/Right
-        moveInput.y = Input.GetAxisRaw("Vertical");   // W/S or Up/Down
+        moveInput.x = Input.GetAxisRaw("Horizontal");
+        moveInput.y = Input.GetAxisRaw("Vertical");
 
-        // Normalize so diagonal isn't faster
         if (moveInput != Vector2.zero)
         {
             moveInput.Normalize();
-
-            // Store last direction for idle facing
             lastMoveDir = moveInput;
 
             animator.SetFloat("lastMoveX", lastMoveDir.x);
             animator.SetFloat("lastMoveY", lastMoveDir.y);
         }
 
-        // Pass movement to animator
         animator.SetFloat("moveX", moveInput.x);
         animator.SetFloat("moveY", moveInput.y);
         animator.SetBool("isMoving", moveInput != Vector2.zero);
@@ -35,7 +37,13 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Actually move the player
-        rb.MovePosition(rb.position + moveInput * moveSpeed * Time.fixedDeltaTime);
+        float currentSpeed = moveSpeed;
+
+        if (speedAbility != null)
+        {
+            currentSpeed = speedAbility.GetCurrentSpeed();
+        }
+
+        rb.MovePosition(rb.position + moveInput * currentSpeed * Time.fixedDeltaTime);
     }
 }

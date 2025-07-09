@@ -7392,7 +7392,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_266
+      name: character3_idleleft
       rect:
         serializedVersion: 2
         x: 391
@@ -7414,7 +7414,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_267
+      name: character3_idledown
       rect:
         serializedVersion: 2
         x: 408
@@ -7436,7 +7436,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_268
+      name: character3_idleup
       rect:
         serializedVersion: 2
         x: 425
@@ -7458,7 +7458,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_269
+      name: character3_idleright
       rect:
         serializedVersion: 2
         x: 442
@@ -7986,7 +7986,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_293
+      name: character3_walkleft1
       rect:
         serializedVersion: 2
         x: 391
@@ -8008,7 +8008,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_294
+      name: character3_walkdown1
       rect:
         serializedVersion: 2
         x: 408
@@ -8030,7 +8030,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_295
+      name: character3_walkup1
       rect:
         serializedVersion: 2
         x: 425
@@ -8052,7 +8052,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_296
+      name: character3_walkright1
       rect:
         serializedVersion: 2
         x: 442
@@ -8580,7 +8580,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_320
+      name: character3_walkleft2
       rect:
         serializedVersion: 2
         x: 391
@@ -8602,7 +8602,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_321
+      name: character3_walkdown2
       rect:
         serializedVersion: 2
         x: 408
@@ -8624,7 +8624,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_322
+      name: character3_walkup2
       rect:
         serializedVersion: 2
         x: 425
@@ -8646,7 +8646,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_323
+      name: character3_walkright2
       rect:
         serializedVersion: 2
         x: 442
@@ -10956,7 +10956,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_428
+      name: character2_idleleft
       rect:
         serializedVersion: 2
         x: 391
@@ -10978,7 +10978,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_429
+      name: character2_idledown
       rect:
         serializedVersion: 2
         x: 408
@@ -11000,7 +11000,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_430
+      name: character2_idleup
       rect:
         serializedVersion: 2
         x: 425
@@ -11022,7 +11022,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_431
+      name: character2_idleright
       rect:
         serializedVersion: 2
         x: 442
@@ -11550,7 +11550,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_455
+      name: character2_walkleft1
       rect:
         serializedVersion: 2
         x: 391
@@ -11572,7 +11572,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_456
+      name: character2_walkdown1
       rect:
         serializedVersion: 2
         x: 408
@@ -11594,7 +11594,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_457
+      name: character2_walkup1
       rect:
         serializedVersion: 2
         x: 425
@@ -11616,7 +11616,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_458
+      name: character2_walkright1
       rect:
         serializedVersion: 2
         x: 442
@@ -12144,7 +12144,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_482
+      name: character2_walkleft2
       rect:
         serializedVersion: 2
         x: 391
@@ -12166,7 +12166,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_483
+      name: character2_walkdown2
       rect:
         serializedVersion: 2
         x: 408
@@ -12188,7 +12188,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_484
+      name: character2_walkup2
       rect:
         serializedVersion: 2
         x: 425
@@ -12210,7 +12210,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_485
+      name: character2_walkright2
       rect:
         serializedVersion: 2
         x: 442
@@ -12245,6 +12245,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      Character2: -3143123535426600287
       character1_idledown: -7985061311364382143
       character1_idleleft: -7232604371266642109
       character1_idleright: -4368419120266092742
@@ -12257,6 +12258,30 @@ TextureImporter:
       character1_walkright2: -6857708336303763154
       character1_walkup1: 1015956377206813849
       character1_walkup2: -6293287851939957940
+      character2_idledown: -5376140729408731076
+      character2_idleleft: 6870151107375714452
+      character2_idleright: 3811023516129409343
+      character2_idleup: -7552520643579981613
+      character2_walkdown1: 544568743617603107
+      character2_walkdown2: 161756162
+      character2_walkleft1: 7501025935166569823
+      character2_walkleft2: -1569260289
+      character2_walkright1: 6664514559006721258
+      character2_walkright2: -1443713876
+      character2_walkup1: -3035277235447720121
+      character2_walkup2: -597368692
+      character3_idledown: -3143123535426600287
+      character3_idleleft: 3645334889852244773
+      character3_idleright: -275486228140114307
+      character3_idleup: 1628125724305092412
+      character3_walkdown1: 7859231986774440964
+      character3_walkdown2: -1408177447370720925
+      character3_walkleft1: 8244586921701137217
+      character3_walkleft2: -2250768352597597639
+      character3_walkright1: -321419613943888674
+      character3_walkright2: -8448559267124420605
+      character3_walkup1: 62425069127233842
+      character3_walkup2: 7774261559213723998
       test1: 4865326696082551069
       test10: -2996584346089854527
       test11: 4760556609404049016
@@ -12439,10 +12464,6 @@ TextureImporter:
       tilemap_263: -3122655099883117741
       tilemap_264: 7459943440915312202
       tilemap_265: 1392964746661342517
-      tilemap_266: 3645334889852244773
-      tilemap_267: -3143123535426600287
-      tilemap_268: 1628125724305092412
-      tilemap_269: -275486228140114307
       tilemap_27: -4683339530408089196
       tilemap_270: 5321281755016979015
       tilemap_271: 7848613986317300794
@@ -12469,10 +12490,6 @@ TextureImporter:
       tilemap_290: -4486400200236260253
       tilemap_291: -8419354174639914407
       tilemap_292: -4398159810699564616
-      tilemap_293: 8244586921701137217
-      tilemap_294: 7859231986774440964
-      tilemap_295: 62425069127233842
-      tilemap_296: -321419613943888674
       tilemap_297: 3997045841122873094
       tilemap_298: -998367524188546573
       tilemap_299: -7588427065009902259
@@ -12500,10 +12517,6 @@ TextureImporter:
       tilemap_318: -2609491274512623462
       tilemap_319: 6869697673858321283
       tilemap_32: -4326689981271417894
-      tilemap_320: -2250768352597597639
-      tilemap_321: -1408177447370720925
-      tilemap_322: 7774261559213723998
-      tilemap_323: -8448559267124420605
       tilemap_324: -7998185090463867131
       tilemap_325: 3009706252052368055
       tilemap_326: -2146547185291297555
@@ -12619,11 +12632,7 @@ TextureImporter:
       tilemap_425: -4430881327368185242
       tilemap_426: 1302078612604801979
       tilemap_427: -3474061085969318923
-      tilemap_428: 6870151107375714452
-      tilemap_429: -5376140729408731076
       tilemap_43: 6296137254373669167
-      tilemap_430: -7552520643579981613
-      tilemap_431: 3811023516129409343
       tilemap_432: 7691109639165059644
       tilemap_433: 5750582041908823957
       tilemap_434: -5417588453175113745
@@ -12649,10 +12658,6 @@ TextureImporter:
       tilemap_452: -6214866644991831413
       tilemap_453: -1097141801521267723
       tilemap_454: 471774949007157683
-      tilemap_455: 7501025935166569823
-      tilemap_456: 544568743617603107
-      tilemap_457: -3035277235447720121
-      tilemap_458: 6664514559006721258
       tilemap_459: 2972987439737107188
       tilemap_46: 7969752024136316262
       tilemap_460: 1078129914779050611
@@ -12679,10 +12684,6 @@ TextureImporter:
       tilemap_48: 5997434355426740714
       tilemap_480: 5104938523456252866
       tilemap_481: 259985884
-      tilemap_482: -1569260289
-      tilemap_483: 161756162
-      tilemap_484: -597368692
-      tilemap_485: -1443713876
       tilemap_49: 3212541487564439254
       tilemap_5: -8420670720628680731
       tilemap_54: -979089462801025887
