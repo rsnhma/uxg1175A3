@@ -63,5 +63,8 @@ TagManager:
   - name: decor
     uniqueID: 2614548343
     locked: 0
+  - name: enemy
+    uniqueID: 1471802441
+    locked: 0
   m_RenderingLayers:
   - Default

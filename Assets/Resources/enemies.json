@@ -16,8 +16,8 @@
     "behavior": "ChargeAndSwing"
   },
   {
-    "id": "dog",
-    "name": "Lab Dog",
+    "id": "spider",
+    "name": "Mutant Spider",
     "speed": 5.0,
     "health": 10,
     "damageToPlayer": 2.0,
