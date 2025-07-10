@@ -94,8 +94,16 @@ public class EnemyBehaviour : MonoBehaviour
         health -= amount;
         if (health <= 0)
         {
+            if (EnemyWaveManager.Instance != null)
+            {
+                EnemyWaveManager.Instance.NotifyEnemyDefeated();
+            }
+            else
+            {
+                Debug.LogWarning("EnemyWaveManager.Instance is null!");
+            }
             Destroy(gameObject);
-            EnemyWaveManager.Instance.NotifyEnemyDefeated();
+
         }
     }
 }
