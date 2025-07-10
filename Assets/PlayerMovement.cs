@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
 
     private Vector2 moveInput;
-    private Vector2 lastMoveDir;
+    [HideInInspector] public Vector2 lastMoveDir;
 
     private Character3Ability speedAbility;
 
