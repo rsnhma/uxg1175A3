@@ -11,7 +11,7 @@ public class EnemyWaveManager : MonoBehaviour
     private List<LevelWaveData> allWaves;
     private List<WaveData> currentLevelWaves;
 
-    private int currentWaveIndex = 0;
+    private int currentWaveIndex = 1;
     private int enemiesRemaining = 0;
 
     private void Awake()
@@ -29,7 +29,7 @@ public class EnemyWaveManager : MonoBehaviour
 
     public void StartLevel(int level)
     {
-        currentWaveIndex = 0;
+        currentWaveIndex = 1;
         enemiesRemaining = 0;
         currentLevelWaves = allWaves.Find(l => l.level == level).waves;
         StartCoroutine(SpawnNextWave());

@@ -18,9 +18,9 @@
   {
     "level": 3,
     "waves": [
-      { "waveNumber": 1, "enemyId": "dog", "count": 1 },
-      { "waveNumber": 2, "enemyId": "dog", "countMin": 1, "countMax": 2 },
-      { "waveNumber": 3, "enemyId": "dog", "countMin": 1, "countMax": 2 }
+      { "waveNumber": 1, "enemyId": "spider", "count": 1 },
+      { "waveNumber": 2, "enemyId": "spider", "countMin": 1, "countMax": 2 },
+      { "waveNumber": 3, "enemyId": "spider", "countMin": 1, "countMax": 2 }
     ]
   }
 ]
