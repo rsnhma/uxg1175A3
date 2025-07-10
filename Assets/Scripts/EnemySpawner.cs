@@ -4,9 +4,11 @@ public class EnemySpawner : MonoBehaviour
 {
     public GameObject ratPrefab;
     public GameObject goblinPrefab;
-    public GameObject dogPrefab;
-    public Vector2 spawnAreaMin = new Vector2(-8, -4);
-    public Vector2 spawnAreaMax = new Vector2(8, 4);
+    public GameObject spiderPrefab;
+
+    public Transform spawnPoint;
+    //public Vector2 spawnAreaMin = new Vector2(-8, -4);
+    //public Vector2 spawnAreaMax = new Vector2(8, 4);
 
     public void SpawnEnemy(string enemyId)
     {
@@ -16,13 +18,13 @@ public class EnemySpawner : MonoBehaviour
         {
             case "rat": prefab = ratPrefab; break;
             case "goblin": prefab = goblinPrefab; break;
-            case "dog": prefab = dogPrefab; break;
+            case "spider": prefab = spiderPrefab; break;
         }
 
         if (prefab == null) return;
 
-        Vector2 spawnPos = new Vector2( Random.Range(spawnAreaMin.x, spawnAreaMax.x),Random.Range(spawnAreaMin.y, spawnAreaMax.y));
-        GameObject enemy = Instantiate(prefab, spawnPos, Quaternion.identity);
+        // Always spawn at your chosen spawn point's position
+        GameObject enemy = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
 
         // Initialize from JSON data
         EnemyData data = EnemyDatabase.GetEnemyById(enemyId);
