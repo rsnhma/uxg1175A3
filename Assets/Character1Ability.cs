@@ -8,15 +8,17 @@ public class Character1Ability : MonoBehaviour
     public float healCooldown = 10f;
     private float lastHealTime = -Mathf.Infinity;
 
-    public KeyCode healKey = KeyCode.E; 
+    public KeyCode healKey = KeyCode.E;
 
-    public HealthUI healthUI; 
+    public HealthUI healthUI;
+
+    [Header("Healing Particles")]
+    public GameObject healParticlesPrefab;
 
     private void Start()
     {
-        currentHearts = maxHearts;
+        currentHearts = maxHearts - 1;
 
-        // Initialize UI
         if (healthUI != null)
         {
             healthUI.SetMaxHearts(maxHearts);
@@ -50,9 +52,9 @@ public class Character1Ability : MonoBehaviour
         int oldHearts = currentHearts;
         currentHearts += amount;
         if (currentHearts > maxHearts)
-        {
             currentHearts = maxHearts;
-        }
+
+        PlayHealParticles();
 
         if (currentHearts != oldHearts)
         {
@@ -60,11 +62,18 @@ public class Character1Ability : MonoBehaviour
         }
     }
 
+    private void PlayHealParticles()
+    {
+        if (healParticlesPrefab != null)
+        {
+            Instantiate(healParticlesPrefab, transform.position, Quaternion.identity, transform)
+                .GetComponent<ParticleSystem>()?.Play();
+        }
+    }
+
     private void UpdateUI()
     {
         if (healthUI != null)
-        {
             healthUI.UpdateHearts(currentHearts);
-        }
     }
 }
