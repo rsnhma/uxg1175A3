@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Character3Ability : MonoBehaviour
 {
@@ -13,11 +13,28 @@ public class Character3Ability : MonoBehaviour
 
     public KeyCode abilityKey = KeyCode.E;
 
+    public TrailRenderer trailRenderer; 
+
+    private void Start()
+    {
+        if (trailRenderer != null)
+        {
+            // start with trail off
+            trailRenderer.emitting = false;
+        }
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(abilityKey))
         {
             TryActivateSpeedBoost();
+        }
+
+        // turn trail on during boost, off otherwise
+        if (trailRenderer != null)
+        {
+            trailRenderer.emitting = (Time.time <= boostEndTime);
         }
     }
 
