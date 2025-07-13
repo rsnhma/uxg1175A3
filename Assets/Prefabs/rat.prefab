@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7168687401807465711}
   - component: {fileID: 7161360384478793392}
-  - component: {fileID: 8266727657673642083}
+  - component: {fileID: 5391891287915532128}
   - component: {fileID: 4336662008038554009}
   - component: {fileID: 6727554043022710184}
   - component: {fileID: 1830016597909143790}
@@ -91,7 +91,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8266727657673642083
+--- !u!114 &5391891287915532128
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,16 +100,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 2054411748608053415}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b86aad0686df1cf4a82f791c26122a09, type: 3}
+  m_Script: {fileID: 11500000, guid: 7da229d68ef1c6240a5adbc269f3aaaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemyId: rat
-  moveSpeed: 1.6
   roamSpeed: 1.5
   maxHealth: 3
   health: 3
   damageToPlayer: 0.5
-  behavior: dash
+  moveSpeed: 2
+  speedBoostMultiplier: 1.5
 --- !u!114 &4336662008038554009
 MonoBehaviour:
   m_ObjectHideFlags: 0
