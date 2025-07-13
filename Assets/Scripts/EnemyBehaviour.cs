@@ -3,29 +3,26 @@ using UnityEngine;
 [RequireComponent(typeof(EnemyPlayerAwareness))]
 public class EnemyBehaviour : MonoBehaviour
 {
-    public string enemyId;
-    public float moveSpeed;      // Used for chasing
+    public string enemyId; // For EnemyWaveManager Behvaiour
     public float roamSpeed = 1.5f;  // Slower speed for roaming
     public float maxHealth;
     public float health;
     public float damageToPlayer;
-    public string behavior;
+   
 
-    private EnemyPlayerAwareness awareness;
+    protected EnemyPlayerAwareness awareness;
 
-    private Rigidbody2D rb; // Recommended for smoother movement
-    private Vector2 targetDirection;
-    private Vector2 roamDirection;
+    protected Rigidbody2D rb; 
+    protected Vector2 targetDirection;
+    protected Vector2 roamDirection;
     private float changeDirectionCooldown;
 
     public void Initialize(EnemyData data)
     {
         enemyId = data.id;
-        moveSpeed = data.speed;
         maxHealth = data.health;
         health = data.health;
         damageToPlayer = data.damageToPlayer;
-        behavior = data.behavior;
     }
 
     private void Awake()
@@ -45,7 +42,7 @@ public class EnemyBehaviour : MonoBehaviour
         Move();
     }
 
-    private void UpdateTargetDirection()
+    protected virtual void UpdateTargetDirection()
     {
         if (awareness.AwareOfPlayer)
         {
@@ -60,7 +57,7 @@ public class EnemyBehaviour : MonoBehaviour
         }
     }
 
-    private void HandleRoam()
+    protected void HandleRoam()
     {
         changeDirectionCooldown -= Time.deltaTime;
 
@@ -70,7 +67,7 @@ public class EnemyBehaviour : MonoBehaviour
         }
     }
 
-    private void PickNewRoamDirection()
+    protected void PickNewRoamDirection()
     {
         float angle = Random.Range(0f, 360f);
         roamDirection = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)).normalized;
@@ -85,11 +82,17 @@ public class EnemyBehaviour : MonoBehaviour
             return;
         }
 
-        float speed = awareness.AwareOfPlayer ? moveSpeed : roamSpeed;
+        float speed = awareness.AwareOfPlayer ? GetChaseSpeed() : roamSpeed;
         rb.linearVelocity = targetDirection * speed;
     }
 
-    public void TakeDamage(float amount)
+    protected virtual float GetChaseSpeed()
+    {
+        return roamSpeed; // fallback default, but subclasses will override
+    }
+
+
+    public virtual void TakeDamage (float amount)
     {
         health -= amount;
         if (health <= 0)
