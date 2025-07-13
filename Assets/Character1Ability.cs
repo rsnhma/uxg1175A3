@@ -2,27 +2,23 @@ using UnityEngine;
 
 public class Character1Ability : MonoBehaviour
 {
-    public int maxHearts = 5;
-    public int currentHearts { get; private set; }
-
     public float healCooldown = 10f;
     private float lastHealTime = -Mathf.Infinity;
 
     public KeyCode healKey = KeyCode.E;
 
-    public HealthUI healthUI;
-
     [Header("Healing Particles")]
     public GameObject healParticlesPrefab;
 
+    private PlayerHealth playerHealth;
+
     private void Start()
     {
-        currentHearts = maxHearts - 1;
+        playerHealth = GetComponent<PlayerHealth>();
 
-        if (healthUI != null)
+        if (playerHealth == null)
         {
-            healthUI.SetMaxHearts(maxHearts);
-            healthUI.UpdateHearts(currentHearts);
+            Debug.LogError("PlayerHealth component not found on this GameObject!");
         }
     }
 
@@ -49,16 +45,17 @@ public class Character1Ability : MonoBehaviour
 
     private void Heal(int amount)
     {
-        int oldHearts = currentHearts;
-        currentHearts += amount;
-        if (currentHearts > maxHearts)
-            currentHearts = maxHearts;
-
-        PlayHealParticles();
-
-        if (currentHearts != oldHearts)
+        if (playerHealth != null)
         {
-            UpdateUI();
+            int oldHealth = playerHealth.currentHealth;
+            playerHealth.currentHealth += amount;
+            playerHealth.currentHealth = Mathf.Clamp(playerHealth.currentHealth, 0, playerHealth.maxHealth);
+
+            if (playerHealth.currentHealth != oldHealth)
+            {
+                playerHealth.UpdateHealthUI();
+                PlayHealParticles();
+            }
         }
     }
 
@@ -69,11 +66,5 @@ public class Character1Ability : MonoBehaviour
             Instantiate(healParticlesPrefab, transform.position, Quaternion.identity, transform)
                 .GetComponent<ParticleSystem>()?.Play();
         }
-    }
-
-    private void UpdateUI()
-    {
-        if (healthUI != null)
-            healthUI.UpdateHearts(currentHearts);
     }
 }
