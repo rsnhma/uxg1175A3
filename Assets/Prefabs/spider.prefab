@@ -108,7 +108,7 @@ MonoBehaviour:
   maxHealth: 0
   health: 0
   damageToPlayer: 0
-  moveSpeed: 3
+  moveSpeed: 4
   dodgeChance: 0.842
   dodgeDistance: 1.5
   dodgeSpeed: 10
