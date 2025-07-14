@@ -7,6 +7,8 @@ public class GoblinBehaviour : EnemyBehaviour
 
     private float swingTimer = 0f;
 
+    public Animator animator;
+
     protected override void UpdateTargetDirection()
     {
         if (awareness.AwareOfPlayer)
@@ -23,6 +25,13 @@ public class GoblinBehaviour : EnemyBehaviour
         if (swingTimer > 0f)
         {
             swingTimer -= Time.deltaTime;
+        }
+
+        if (targetDirection.magnitude > 0.01f)
+        {
+
+            animator.SetFloat("MoveX", targetDirection.x);
+            animator.SetFloat("MoveY", targetDirection.y);
         }
     }
 

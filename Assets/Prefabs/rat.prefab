@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4336662008038554009}
   - component: {fileID: 6727554043022710184}
   - component: {fileID: 1830016597909143790}
+  - component: {fileID: 5062805400613331786}
   m_Layer: 0
   m_Name: rat
   m_TagString: Untagged
@@ -80,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 1471802441
   m_SortingLayer: 8
   m_SortingOrder: 0
-  m_Sprite: {fileID: 202502852184435092, guid: 63acceb4fd739a643aaa42fa906806ab, type: 3}
+  m_Sprite: {fileID: 1025930200, guid: 9139bd5debd9b4fd4889d10be7f11da5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,13 +104,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7da229d68ef1c6240a5adbc269f3aaaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyId: rat
+  enemyId: Rat
   roamSpeed: 1.5
   maxHealth: 3
   health: 3
   damageToPlayer: 0.5
   moveSpeed: 2
-  speedBoostMultiplier: 1.5
+  animator: {fileID: 5062805400613331786}
 --- !u!114 &4336662008038554009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,3 +186,25 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!95 &5062805400613331786
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054411748608053415}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 81d2b35eb94b7f74990aa9232ceabf21, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
