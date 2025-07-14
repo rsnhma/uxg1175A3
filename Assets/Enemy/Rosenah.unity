@@ -9051,6 +9051,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1430728681 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2532487823591306113, guid: 4c3cae69ea7fee14190b364412fbdf35, type: 3}
+  m_PrefabInstance: {fileID: 1757477245}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1430728688
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430728681}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f91fc3e4eae4d59459a9014a3d70135d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1444418917
 GameObject:
   m_ObjectHideFlags: 0
@@ -9279,10 +9306,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: rat
       objectReference: {fileID: 0}
-    - target: {fileID: 5391891287915532128, guid: 9dec674093a1b3245bbd0d4c9ff52bd9, type: 3}
-      propertyPath: enemyId
-      value: Rat
-      objectReference: {fileID: 0}
     - target: {fileID: 7168687401807465711, guid: 9dec674093a1b3245bbd0d4c9ff52bd9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.84
@@ -9429,6 +9452,8 @@ GameObject:
   - component: {fileID: 1536485196}
   - component: {fileID: 1536485195}
   - component: {fileID: 1536485194}
+  - component: {fileID: 1536485200}
+  - component: {fileID: 1536485201}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -9448,10 +9473,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 069f9eec91b7e67488d24935ab812ae0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHearts: 5
   healCooldown: 10
   healKey: 101
-  healthUI: {fileID: 0}
   healParticlesPrefab: {fileID: 0}
 --- !u!50 &1536485195
 Rigidbody2D:
@@ -9591,12 +9614,42 @@ Transform:
   m_GameObject: {fileID: 1536485193}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.09, y: -2.37, z: 0}
+  m_LocalPosition: {x: -7, y: -2.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1536485200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536485193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ddabcc7578c479fb55ae7fe62bdd32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  potionPrefab: {fileID: 0}
+  throwPoint: {fileID: 0}
+  throwForce: 10
+--- !u!114 &1536485201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536485193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26ab1f5b4252ef1469deb18dc8676765, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 5
+  currentHealth: 0
+  healthIcons: []
 --- !u!1 &1549538066
 GameObject:
   m_ObjectHideFlags: 0
@@ -10831,6 +10884,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1384520244840653700, guid: 4c3cae69ea7fee14190b364412fbdf35, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1430728688}
     - target: {fileID: 2038312761897585699, guid: 4c3cae69ea7fee14190b364412fbdf35, type: 3}
       propertyPath: m_Radius
       value: 0.57905465
@@ -10846,6 +10903,10 @@ PrefabInstance:
     - target: {fileID: 2532487823591306113, guid: 4c3cae69ea7fee14190b364412fbdf35, type: 3}
       propertyPath: m_Name
       value: goblin
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532487823591306113, guid: 4c3cae69ea7fee14190b364412fbdf35, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6500440973975094995, guid: 4c3cae69ea7fee14190b364412fbdf35, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10890,7 +10951,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2532487823591306113, guid: 4c3cae69ea7fee14190b364412fbdf35, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1430728688}
   m_SourcePrefab: {fileID: 100100000, guid: 4c3cae69ea7fee14190b364412fbdf35, type: 3}
 --- !u!1 &1766788209
 GameObject:
@@ -37250,6 +37314,10 @@ PrefabInstance:
     - target: {fileID: 1934573941150859375, guid: 607a3647fd5638c408ccc42080a5ee6a, type: 3}
       propertyPath: m_Name
       value: spider
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934573941150859375, guid: 607a3647fd5638c408ccc42080a5ee6a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8912478644181790303, guid: 607a3647fd5638c408ccc42080a5ee6a, type: 3}
       propertyPath: m_LocalPosition.x

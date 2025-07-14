@@ -3,9 +3,11 @@ using UnityEngine;
 public class RatBehaviour : EnemyBehaviour
 {
     public float moveSpeed;  
-    public float speedBoostMultiplier = 1.5f;
+    private float speedBoostMultiplier = 1.5f;
 
     private bool boosted = false;
+
+    public Animator animator;
 
     protected override void UpdateTargetDirection()
     {
@@ -25,6 +27,14 @@ public class RatBehaviour : EnemyBehaviour
             HandleRoam();
             targetDirection = roamDirection;
         }
+
+        if (targetDirection.magnitude > 0.01f)
+        {
+            
+            animator.SetFloat("MoveX", targetDirection.x);
+            animator.SetFloat("MoveY", targetDirection.y);
+        }
+
     }
 
     protected override float GetChaseSpeed()
