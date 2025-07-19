@@ -11,8 +11,26 @@ public class SpiderBehaviour : EnemyBehaviour
     private bool isDodging = false;
     private Vector2 dodgeTarget;
 
+    public Animator animator;
+
+    private float biteCooldown = 2f; // spider stun
+    private float biteTimer = 0f;
+
     protected override void UpdateTargetDirection()
     {
+        if (biteTimer > 0f)
+        {
+            biteTimer -= Time.deltaTime;
+            targetDirection = Vector2.zero; // stop moving while stunned
+
+            animator.speed = 0f; // PAUSE anim when stunned
+            return;
+        }
+        else
+        {
+            animator.speed = 1f; // RESUME when unstunned
+        }
+
         if (isDodging)
         {
             // Move towards the dodge target
@@ -33,6 +51,13 @@ public class SpiderBehaviour : EnemyBehaviour
         {
             HandleRoam();
             targetDirection = roamDirection;
+        }
+
+        if (targetDirection.magnitude > 0.01f)
+        {
+
+            animator.SetFloat("MoveX", targetDirection.x);
+            animator.SetFloat("MoveY", targetDirection.y);
         }
     }
 
@@ -57,22 +82,19 @@ public class SpiderBehaviour : EnemyBehaviour
             dodgeTarget = (Vector2)transform.position + dodgeDir * dodgeDistance;
             isDodging = true;
 
-            return; // skip damage!
+            return; // skip damage
         }
 
         base.TakeDamage(amount);
     }
 
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.CompareTag("Player"))
-    //    {
-    //        PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
-    //        if (playerHealth != null)
-    //        {
-    //            playerHealth.TakeDamage(damageToPlayer);
-    //            Debug.Log($"Spider bit player for {damageToPlayer} hearts!");
-    //        }
-    //    }
-    //}
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player") && biteTimer <= 0f)
+        {
+            PlayerStats.Instance.TakeDamage(2f);
+            Debug.Log("PLayer took 2 damage from Spider");
+            biteTimer = biteCooldown;
+        }
+    }
 }

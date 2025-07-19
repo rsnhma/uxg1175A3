@@ -7,8 +7,6 @@ public class EnemySpawner : MonoBehaviour
     public GameObject spiderPrefab;
 
     public Transform spawnPoint;
-    //public Vector2 spawnAreaMin = new Vector2(-8, -4);
-    //public Vector2 spawnAreaMax = new Vector2(8, 4);
 
     public void SpawnEnemy(string enemyId)
     {

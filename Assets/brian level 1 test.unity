@@ -8114,7 +8114,7 @@ GameObject:
   - component: {fileID: 1178737070}
   m_Layer: 0
   m_Name: Character1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8131,10 +8131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 069f9eec91b7e67488d24935ab812ae0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHearts: 5
   healCooldown: 10
   healKey: 101
-  healthUI: {fileID: 0}
   healParticlesPrefab: {fileID: 2642225281303590948, guid: 48ef34ce54897634faee8f8c78d774b5, type: 3}
 --- !u!50 &1178737064
 Rigidbody2D:
@@ -8179,6 +8177,15 @@ MonoBehaviour:
   rb: {fileID: 1178737064}
   animator: {fileID: 1178737066}
   lastMoveDir: {x: 0, y: 0}
+  weaponHoldPoint: {fileID: 0}
+  bulletPrefab: {fileID: 0}
+  bulletBarrelExit: {fileID: 0}
+  handgunObject: {fileID: 0}
+  beamWeaponHoldPoint: {fileID: 0}
+  beamBarrelExit: {fileID: 0}
+  beamPrefab: {fileID: 0}
+  beamgunObject: {fileID: 0}
+  startFacingDirection: {x: 0, y: -1}
 --- !u!95 &1178737066
 Animator:
   serializedVersion: 7

@@ -10,27 +10,27 @@ public class Character1Ability : MonoBehaviour
     [Header("Healing Particles")]
     public GameObject healParticlesPrefab;
 
-    private PlayerHealth playerHealth;
+    private PlayerStats playerStats;
 
-    private void Start()
-    {
-        playerHealth = GetComponent<PlayerHealth>();
+    //private void Start()
+    //{
+    //    playerStats = GetComponent<PlayerStats>();
 
-        if (playerHealth == null)
-        {
-            Debug.LogError("PlayerHealth component not found on this GameObject!");
-        }
-    }
+    //    if (playerStats == null)
+    //    {
+    //        Debug.LogError("PlayerStats component not found on this GameObject!");
+    //    }
+    //}
 
     private void Update()
     {
         if (Input.GetKeyDown(healKey))
         {
-            TryHeal(1);
+            TryHeal(1f);
         }
     }
 
-    public void TryHeal(int amount)
+    public void TryHeal(float amount)
     {
         if (Time.time >= lastHealTime + healCooldown)
         {
@@ -43,19 +43,16 @@ public class Character1Ability : MonoBehaviour
         }
     }
 
-    private void Heal(int amount)
+    private void Heal(float amount)
     {
-        if (playerHealth != null)
-        {
-            int oldHealth = playerHealth.currentHealth;
-            playerHealth.currentHealth += amount;
-            playerHealth.currentHealth = Mathf.Clamp(playerHealth.currentHealth, 0, playerHealth.maxHealth);
+        float oldHealth = PlayerStats.Instance.Health;
 
-            if (playerHealth.currentHealth != oldHealth)
-            {
-                playerHealth.UpdateHealthUI();
-                PlayHealParticles();
-            }
+        PlayerStats.Instance.Heal(amount);
+
+        // Only play particles if we actually healed
+        if (PlayerStats.Instance.Health > oldHealth)
+        {
+            PlayHealParticles();
         }
     }
 

@@ -1,10 +1,12 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RatBehaviour : EnemyBehaviour
 {
     public float moveSpeed;  
     private float speedBoostMultiplier = 1.5f;
-
+    private float damageCooldown = 1f;
+    private float lastDamageTime = -Mathf.Infinity;
     private bool boosted = false;
 
     public Animator animator;
@@ -42,16 +44,13 @@ public class RatBehaviour : EnemyBehaviour
         return moveSpeed;
     }
 
-    /*private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && Time.time >= lastDamageTime + damageCooldown)
         {
-            PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
-            if (playerHealth != null)
-            {
-                playerHealth.TakeDamage(damageToPlayer);
-                Debug.Log($"Rat damaged player for {damageToPlayer} hearts!");
-            }
+            PlayerStats.Instance.TakeDamage(0.5f);
+            Debug.Log("PLayer took 0.5 damage from Rat");
+            lastDamageTime = Time.time;
         }
-    }*/
+    }
 }

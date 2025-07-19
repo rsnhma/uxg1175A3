@@ -1,21 +1,26 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(EnemyPlayerAwareness))]
 public class EnemyBehaviour : MonoBehaviour
 {
     public string enemyId; // For EnemyWaveManager Behvaiour
     public float roamSpeed = 1.5f;  // Slower speed for roaming
+
     public float maxHealth;
     public float health;
     public float damageToPlayer;
-   
+
+    public Slider healthBarSlider;
 
     protected EnemyPlayerAwareness awareness;
-
     protected Rigidbody2D rb; 
     protected Vector2 targetDirection;
     protected Vector2 roamDirection;
     private float changeDirectionCooldown;
+
+    [SerializeField] private LayerMask obstacleLayers; // assign to walls, border and decor
+    [SerializeField] private float obstacleCheckDistance = 0.5f; // tweak to match our enemy size
 
     public void Initialize(EnemyData data)
     {
@@ -33,6 +38,8 @@ public class EnemyBehaviour : MonoBehaviour
 
     private void Start()
     {
+        health = maxHealth;
+        UpdateHealthBar();
         PickNewRoamDirection();
     }
 
@@ -82,8 +89,33 @@ public class EnemyBehaviour : MonoBehaviour
             return;
         }
 
+        Vector2 moveDir = targetDirection.normalized;
+
+        if (IsPathBlocked(moveDir))
+        {
+            if (!awareness.AwareOfPlayer)
+            {
+                // Roaming & hit a wall ? pick new roam direction
+                PickNewRoamDirection();
+                return;
+            }
+            else
+            {
+                // Chasing & blocked ? stop for now (or add smart logic later)
+                rb.linearVelocity = Vector2.zero;
+                return;
+            }
+        }
+
         float speed = awareness.AwareOfPlayer ? GetChaseSpeed() : roamSpeed;
-        rb.linearVelocity = targetDirection * speed;
+        rb.linearVelocity = moveDir * speed;
+    }
+
+
+    protected virtual bool IsPathBlocked(Vector2 dir)
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, obstacleCheckDistance, obstacleLayers);
+        return hit.collider != null;
     }
 
     protected virtual float GetChaseSpeed()
@@ -91,22 +123,29 @@ public class EnemyBehaviour : MonoBehaviour
         return roamSpeed; // fallback default, but subclasses will override
     }
 
-
-    public virtual void TakeDamage (float amount)
+    public virtual void TakeDamage(float amount)
     {
         health -= amount;
+        health = Mathf.Clamp(health, 0, maxHealth);
+        UpdateHealthBar();
+
         if (health <= 0)
         {
-            if (EnemyWaveManager.Instance != null)
-            {
-                EnemyWaveManager.Instance.NotifyEnemyDefeated();
-            }
-            else
-            {
-                Debug.LogWarning("EnemyWaveManager.Instance is null!");
-            }
-            Destroy(gameObject);
-
+            Die();
         }
+    }
+
+    protected virtual void UpdateHealthBar()
+    {
+        if (healthBarSlider != null)
+            healthBarSlider.value = health / maxHealth;
+    }
+
+    protected virtual void Die()
+    {
+        if (EnemyWaveManager.Instance != null)
+            EnemyWaveManager.Instance.NotifyEnemyDefeated();
+
+        Destroy(gameObject);
     }
 }
