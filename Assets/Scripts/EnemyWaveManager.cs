@@ -11,8 +11,11 @@ public class EnemyWaveManager : MonoBehaviour
     private List<LevelWaveData> allWaves;
     private List<WaveData> currentLevelWaves;
 
-    private int currentWaveIndex = 1;
+    private int currentWaveIndex = 0;
     private int enemiesRemaining = 0;
+
+    public GameObject keycardPrefab;
+    public Transform keycardSpawnPoint;
 
     private void Awake()
     {
@@ -20,18 +23,38 @@ public class EnemyWaveManager : MonoBehaviour
         LoadWaveData();
     }
 
+    private void Start()
+    {
+        // You must manually call StartLevel(level) from another script when level begins.
+    }
+
     void LoadWaveData()
     {
         TextAsset json = Resources.Load<TextAsset>("enemywaves");
-        string fixedJson = "{\"levelWaves\":" + json.text + "}"; // Wrap as an object
+        if (json == null)
+        {
+            Debug.LogError("enemywaves.json not found in Resources folder!");
+            return;
+        }
+
+        string fixedJson = "{\"levelWaves\":" + json.text + "}";
         allWaves = JsonUtility.FromJson<LevelWaveList>(fixedJson).levelWaves;
     }
 
     public void StartLevel(int level)
     {
-        currentWaveIndex = 1;
+        LevelWaveData levelData = allWaves.Find(l => l.level == level);
+        if (levelData == null)
+        {
+            Debug.LogError("No wave data found for level " + level);
+            return;
+        }
+
+        currentWaveIndex = 0;
         enemiesRemaining = 0;
-        currentLevelWaves = allWaves.Find(l => l.level == level).waves;
+        currentLevelWaves = levelData.waves;
+
+        Debug.Log("Starting level " + level + " with " + currentLevelWaves.Count + " waves.");
         StartCoroutine(SpawnNextWave());
     }
 
@@ -40,7 +63,7 @@ public class EnemyWaveManager : MonoBehaviour
         if (currentWaveIndex >= currentLevelWaves.Count)
         {
             Debug.Log("All waves cleared for this level!");
-            // Spawn keycard here if needed
+            SpawnKeycard();
             yield break;
         }
 
@@ -50,22 +73,23 @@ public class EnemyWaveManager : MonoBehaviour
         int spawnCount = wave.count > 0 ? wave.count : Random.Range(wave.countMin, wave.countMax + 1);
         enemiesRemaining = spawnCount;
 
+        Debug.Log($"Spawning Wave {wave.waveNumber} ({spawnCount} x {wave.enemyId})");
+
         for (int i = 0; i < spawnCount; i++)
         {
             spawner.SpawnEnemy(wave.enemyId);
             yield return new WaitForSeconds(0.4f);
         }
 
-        // Goblin/dog: wait until 1/3 HP before next wave
         if (wave.enemyId == "goblin" || wave.enemyId == "spider")
         {
             while (!CheckEnemyLowHealth(wave.enemyId, 0.33f))
             {
                 yield return null;
             }
+            Debug.Log($"{wave.enemyId} reached low health. Continuing.");
         }
 
-        // Wait for enemies to die before next wave
         while (enemiesRemaining > 0)
         {
             yield return null;
@@ -77,6 +101,7 @@ public class EnemyWaveManager : MonoBehaviour
     public void NotifyEnemyDefeated()
     {
         enemiesRemaining--;
+        Debug.Log("Enemy defeated. Remaining: " + enemiesRemaining);
     }
 
     bool CheckEnemyLowHealth(string enemyId, float threshold)
@@ -90,5 +115,25 @@ public class EnemyWaveManager : MonoBehaviour
             }
         }
         return false;
+    }
+
+    void SpawnKeycard()
+    {
+        if (keycardPrefab == null)
+        {
+            Debug.LogWarning("No keycard prefab assigned!");
+            return;
+        }
+
+        if (keycardSpawnPoint != null)
+        {
+            Instantiate(keycardPrefab, keycardSpawnPoint.position, Quaternion.identity);
+        }
+        else
+        {
+            Instantiate(keycardPrefab, Vector3.zero, Quaternion.identity);
+        }
+
+        Debug.Log("Keycard spawned!");
     }
 }

@@ -25,6 +25,14 @@ public class GoblinBehaviour : EnemyBehaviour
         if (swingTimer > 0f)
         {
             swingTimer -= Time.deltaTime;
+            targetDirection = Vector2.zero; // stop moving while stunned
+
+            animator.speed = 0f; // PAUSE anim when stunned
+            return;
+        }
+        else
+        {
+            animator.speed = 1f; // RESUME when unstunned
         }
 
         if (targetDirection.magnitude > 0.01f)
@@ -40,25 +48,17 @@ public class GoblinBehaviour : EnemyBehaviour
         return moveSpeed;
     }
 
-   //private void OnCollisionEnter2D(Collision2D collision)
-   // {
-   //     if (collision.gameObject.CompareTag("Player"))
-   //     {
-   //         if (swingTimer <= 0f)
-   //         {
-   //             PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
-   //             if (playerHealth != null)
-   //             {
-   //                 playerHealth.TakeDamage(damageToPlayer);
-   //                 Debug.Log($"Goblin swings at player! Deals {damageToPlayer} hearts.");
-   //             }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            if (swingTimer <= 0f)
+            {
+                PlayerStats.Instance.TakeDamage(1f);
+                Debug.Log("Player took 1 damage from Goblin");
 
-   //             swingTimer = swingCooldown; // reset cooldown
-   //         }
-   //         else
-   //         {
-   //             Debug.Log("Goblin swing is on cooldown!");
-   //         }
-   //     }
-   // }
+                swingTimer = swingCooldown; // start stun cooldown
+            }
+        }
+    }
 }
