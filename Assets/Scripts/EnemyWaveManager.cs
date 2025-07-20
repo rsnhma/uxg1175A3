@@ -15,7 +15,6 @@ public class EnemyWaveManager : MonoBehaviour
     private int enemiesRemaining;
 
     public GameObject keycardPrefab;
-    //public Transform keycardSpawnPoint;
 
     private void Awake()
     {
@@ -63,7 +62,6 @@ public class EnemyWaveManager : MonoBehaviour
         if (currentWaveIndex >= currentLevelWaves.Count)
         {
             Debug.Log("All waves cleared for this level!");
-            //SpawnKeycard();
             yield break;
         }
 
@@ -121,11 +119,6 @@ public class EnemyWaveManager : MonoBehaviour
         }
         return false;
     }
-
-    //public bool IsFinalEnemy()
-    //{
-    //    return enemiesRemaining == 1 && currentWaveIndex >= currentLevelWaves.Count;
-    //}
 
     public void SpawnKeycardAt(Vector3 position)
     {
