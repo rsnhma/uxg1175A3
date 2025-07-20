@@ -1,13 +1,25 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class EnemyDatabase : MonoBehaviour
+public class EnemyDatabase
 {
     public static List<EnemyData> enemyList;
 
-    void Awake()
+    static EnemyDatabase()
+    {
+        LoadDatabase();
+    }
+
+    private static void LoadDatabase()
     {
         TextAsset jsonText = Resources.Load<TextAsset>("enemies"); // loads Resources/enemies.json
+        if (jsonText == null)
+        {
+            Debug.LogError("enemies.json not found in Resources!");
+            enemyList = new List<EnemyData>();
+            return;
+        }
+
         enemyList = JsonUtility.FromJson<Wrapper>(FixJson(jsonText.text)).enemies; // loads and parses the enemies.json file into a List<EnemyData> by wrapping the array in an object
     }
 
@@ -18,7 +30,7 @@ public class EnemyDatabase : MonoBehaviour
         public List<EnemyData> enemies;
     }
 
-    private string FixJson(string value)
+    private static string FixJson(string value)
     {
         return "{\"enemies\":" + value + "}"; // wrap in an object
     }

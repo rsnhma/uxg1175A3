@@ -41,6 +41,9 @@ public class EnemyBehaviour : MonoBehaviour
         health = maxHealth;
         UpdateHealthBar();
         PickNewRoamDirection();
+
+        // TEST: kill enemy after 3 seconds
+        Invoke(nameof(Die), 3f);
     }
 
     private void FixedUpdate()
@@ -131,6 +134,7 @@ public class EnemyBehaviour : MonoBehaviour
 
         if (health <= 0)
         {
+            Debug.Log($"{enemyId} health is zero or less, calling Die()");
             Die();
         }
     }
@@ -143,8 +147,9 @@ public class EnemyBehaviour : MonoBehaviour
 
     protected virtual void Die()
     {
+        Debug.Log($"Enemy {enemyId} died at {transform.position}");
         if (EnemyWaveManager.Instance != null)
-            EnemyWaveManager.Instance.NotifyEnemyDefeated();
+            EnemyWaveManager.Instance.NotifyEnemyDefeated(transform.position);
 
         Destroy(gameObject);
     }
