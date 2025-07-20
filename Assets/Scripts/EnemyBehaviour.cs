@@ -41,9 +41,6 @@ public class EnemyBehaviour : MonoBehaviour
         health = maxHealth;
         UpdateHealthBar();
         PickNewRoamDirection();
-
-        // TEST: kill enemy after 3 seconds
-        Invoke(nameof(Die), 3f);
     }
 
     private void FixedUpdate()
