@@ -54,10 +54,18 @@ public class GoblinBehaviour : EnemyBehaviour
         {
             if (swingTimer <= 0f)
             {
+                // Stop moving and strike
+                swingTimer = swingCooldown; // cooldown starts
+
+                // Determine strike direction
+                bool isFacingRight = targetDirection.x > 0;
+                animator.SetBool("FacingRight", isFacingRight);
+
+                animator.SetTrigger("Strike"); // triggers StrikeLeft or StrikeRight state
+
                 PlayerStats.Instance.TakeDamage(1f);
                 Debug.Log("Player took 1 damage from Goblin");
 
-                swingTimer = swingCooldown; // start stun cooldown
             }
         }
     }
