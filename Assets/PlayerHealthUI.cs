@@ -15,10 +15,10 @@ public class PlayerHealthUI : MonoBehaviour
         PlayerStats.Instance.onHealthChangedCallback += UpdateHearts;
     }
 
-    private void OnDisable()
+    /*private void OnDisable()
     {
         PlayerStats.Instance.onHealthChangedCallback -= UpdateHearts;
-    }
+    }*/
 
     void Start()
     {

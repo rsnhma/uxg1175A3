@@ -149,7 +149,7 @@ MonoBehaviour:
   healthBarSlider: {fileID: 3651361963245425307}
   obstacleLayers:
     serializedVersion: 2
-    m_Bits: 448
+    m_Bits: 960
   obstacleCheckDistance: 0.5
   moveSpeed: 2
   animator: {fileID: 5062805400613331786}

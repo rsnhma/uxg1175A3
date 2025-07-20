@@ -12,10 +12,10 @@ public class EnemyWaveManager : MonoBehaviour
     private List<WaveData> currentLevelWaves;
 
     private int currentWaveIndex = 0;
-    private int enemiesRemaining = 0;
+    private int enemiesRemaining;
 
     public GameObject keycardPrefab;
-    public Transform keycardSpawnPoint;
+    //public Transform keycardSpawnPoint;
 
     private void Awake()
     {
@@ -25,7 +25,7 @@ public class EnemyWaveManager : MonoBehaviour
 
     private void Start()
     {
-        // You must manually call StartLevel(level) from another script when level begins.
+        StartLevel(1);
     }
 
     void LoadWaveData()
@@ -63,7 +63,7 @@ public class EnemyWaveManager : MonoBehaviour
         if (currentWaveIndex >= currentLevelWaves.Count)
         {
             Debug.Log("All waves cleared for this level!");
-            SpawnKeycard();
+            //SpawnKeycard();
             yield break;
         }
 
@@ -98,10 +98,15 @@ public class EnemyWaveManager : MonoBehaviour
         StartCoroutine(SpawnNextWave());
     }
 
-    public void NotifyEnemyDefeated()
+    public void NotifyEnemyDefeated(Vector3 enemyPosition)
     {
         enemiesRemaining--;
         Debug.Log("Enemy defeated. Remaining: " + enemiesRemaining);
+
+        if (enemiesRemaining == 0 && currentWaveIndex >= currentLevelWaves.Count)
+        {
+            SpawnKeycardAt(enemyPosition);
+        }
     }
 
     bool CheckEnemyLowHealth(string enemyId, float threshold)
@@ -117,7 +122,12 @@ public class EnemyWaveManager : MonoBehaviour
         return false;
     }
 
-    void SpawnKeycard()
+    //public bool IsFinalEnemy()
+    //{
+    //    return enemiesRemaining == 1 && currentWaveIndex >= currentLevelWaves.Count;
+    //}
+
+    public void SpawnKeycardAt(Vector3 position)
     {
         if (keycardPrefab == null)
         {
@@ -125,15 +135,8 @@ public class EnemyWaveManager : MonoBehaviour
             return;
         }
 
-        if (keycardSpawnPoint != null)
-        {
-            Instantiate(keycardPrefab, keycardSpawnPoint.position, Quaternion.identity);
-        }
-        else
-        {
-            Instantiate(keycardPrefab, Vector3.zero, Quaternion.identity);
-        }
-
-        Debug.Log("Keycard spawned!");
+        Instantiate(keycardPrefab, position, Quaternion.identity);
+        Debug.Log("Keycard spawned at enemy death location!");
     }
+
 }
