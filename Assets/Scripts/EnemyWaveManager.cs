@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class EnemyWaveManager : MonoBehaviour
 {
@@ -24,8 +26,22 @@ public class EnemyWaveManager : MonoBehaviour
 
     private void Start()
     {
-        StartLevel(1);
+        string sceneName = SceneManager.GetActiveScene().name;
+
+        // Try to find a number in the scene name (e.g. "level 1 test" -> 1)
+        foreach (string part in sceneName.Split(' '))
+        {
+            if (int.TryParse(part, out int level))
+            {
+                Debug.Log($"Starting wave system for level {level} from scene name '{sceneName}'.");
+                StartLevel(level);
+                return;
+            }
+        }
+
+        Debug.LogError("Could not determine level from scene name: " + sceneName);
     }
+
 
     void LoadWaveData()
     {
