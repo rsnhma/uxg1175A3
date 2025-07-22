@@ -17,7 +17,7 @@ public class DialogueManager : MonoBehaviour
     public float textSpeed;
 
     public AudioClip dialogueTyping;
-    public AudioClip dialoguesiren;
+
     private AudioSource audioSource;
 
     public Image dialoguepanel;
@@ -48,7 +48,8 @@ public class DialogueManager : MonoBehaviour
             {
                 StopAllCoroutines();
               
-                dialoguetext.text = lines[index];  
+                dialoguetext.text = lines[index];
+                
             }
         }
     }
@@ -86,14 +87,7 @@ public class DialogueManager : MonoBehaviour
             SceneManager.LoadSceneAsync(5);
         }
     }
+  
 
-/*  void playmusic()
-    {
-        if (dialoguetext.text == lines[2])
-        {
-            audioSource = this.gameObject.AddComponent<AudioSource>();
-            audioSource.PlayOneShot(dialoguesiren);
-        }
-    }
-*/
+
 }
