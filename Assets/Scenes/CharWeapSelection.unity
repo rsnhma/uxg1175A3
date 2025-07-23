@@ -672,11 +672,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sr: {fileID: 1119165458}
-  characters:
+  characterSprites:
   - {fileID: 6083806894379148034, guid: 41b1df0999eaf194081179cd6b8415a9, type: 3}
   - {fileID: 8821616558950248791, guid: 5b5d0f5ec147308498d57583dd90d95a, type: 3}
   - {fileID: -8951383523087240050, guid: cd95364eabf058940902c0c52745caad, type: 3}
-  playerchar: {fileID: 1119165457}
+  characterPrefabs:
+  - {fileID: 2761938752306913146, guid: 542d3581cec3c9d48ba9a6782e0051af, type: 3}
+  - {fileID: 4830983943138176426, guid: f99e3e2c65d34994fade5eb86a29c986, type: 3}
+  - {fileID: 7463286916890972549, guid: 71e605bb6256ba04fadc657770b3b09e, type: 3}
 --- !u!4 &626775948
 Transform:
   m_ObjectHideFlags: 0
@@ -1100,11 +1103,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1025611322}
   m_CullTransparentMesh: 1
---- !u!1 &1119165457 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4926480872364281873, guid: aa64bb1c7636b484f8e029a81c637c32, type: 3}
-  m_PrefabInstance: {fileID: 720055446651710778}
-  m_PrefabAsset: {fileID: 0}
 --- !u!212 &1119165458 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 3529962021232666839, guid: aa64bb1c7636b484f8e029a81c637c32, type: 3}

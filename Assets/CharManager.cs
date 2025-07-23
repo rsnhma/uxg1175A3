@@ -1,39 +1,47 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEditor;
 using System.Collections.Generic;
 
 public class CharManager : MonoBehaviour
 {
-    public SpriteRenderer sr;
+    public SpriteRenderer sr; // For sprite preview
+    public List<Sprite> characterSprites; // Sprites for preview
+    public List<GameObject> characterPrefabs; // Prefabs for actual characters
 
-    public List<Sprite> characters = new List<Sprite>();
-    private int selectedchar = 0;
+    private int selectedChar = 0;
+    public static int SelectedIndex = 0;
 
-    public GameObject playerchar;
+    void Start()
+    {
+        UpdateCharacterPreview();
+    }
 
     public void NextOption()
     {
-        selectedchar = selectedchar + 1;
-        if (selectedchar >= characters.Count)
-        {
-            selectedchar = 0;
-        }
-        sr.sprite = characters[selectedchar];
+        selectedChar++;
+        if (selectedChar >= characterSprites.Count)
+            selectedChar = 0;
+
+        UpdateCharacterPreview();
     }
+
     public void PrevOption()
     {
-        selectedchar = selectedchar - 1;
-        if (selectedchar < 0)
-        {
-            selectedchar = characters.Count - 1;
-        }
-        sr.sprite = characters[selectedchar];
+        selectedChar--;
+        if (selectedChar < 0)
+            selectedChar = characterSprites.Count - 1;
+
+        UpdateCharacterPreview();
     }
+
+    void UpdateCharacterPreview()
+    {
+        sr.sprite = characterSprites[selectedChar];
+    }
+
     public void PlayGame()
     {
-        Debug.Log("seleted sprite" + selectedchar);
-        PrefabUtility.SaveAsPrefabAsset(playerchar, "Assets/Characters/selectedchar.prefab");
+        SelectedIndex = selectedChar;
         SceneManager.LoadScene(4);
     }
 }
