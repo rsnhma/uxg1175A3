@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      lowell_0: 5970307119986844108
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
