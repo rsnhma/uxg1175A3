@@ -19,30 +19,21 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Hit enemy
-        if (collision.CompareTag("Enemy"))
+        EnemyBehaviour enemy = collision.GetComponent<EnemyBehaviour>();
+        if (enemy != null)
         {
-            EnemyBehaviour enemy = collision.GetComponent<EnemyBehaviour>();
-            if (enemy != null)
+            float damageToDeal = 1f;
+
+            // Check if player has Character2Ability and modify damage
+            Character2Ability boost = FindObjectOfType<Character2Ability>();
+            if (boost != null)
             {
-                float damageToDeal = damage;
-
-                Character2Ability boost = FindObjectOfType<Character2Ability>();
-                if (boost != null)
-                    damageToDeal = boost.DealDamage(damageToDeal);
-
-                enemy.TakeDamage(damageToDeal);
+                damageToDeal = boost.DealDamage(damageToDeal);
             }
 
-            Destroy(gameObject);
-            return;
-        }
-
-        // Hit wall: either Border or Walls layer
-        int layer = collision.gameObject.layer;
-        if (layer == LayerMask.NameToLayer("Border") || layer == LayerMask.NameToLayer("Walls"))
-        {
+            enemy.TakeDamage(damageToDeal);
             Destroy(gameObject);
         }
     }
+
 }
