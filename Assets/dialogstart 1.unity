@@ -578,6 +578,7 @@ MonoBehaviour:
   - Both of you, stay calm and listen to what I have to say.
   - Use w a s d keys to move up, left, down and right respectively.
   - Use the space bar to attack with your weapons.
+  - Click on your 'E' key to restore your health.
   - Keys? Bars? What are you on about?
   - Once you have eliminated all the enemies that come your way, you will get a key
     which unlocks the next door.
@@ -593,6 +594,7 @@ MonoBehaviour:
   - {fileID: -4558313135716986503, guid: b2092cee4e91fd744afa251b7062236a, type: 3}
   - {fileID: -4558313135716986503, guid: b2092cee4e91fd744afa251b7062236a, type: 3}
   - {fileID: 5970307119986844108, guid: 6e101bcec44f0074d8224a004147ce1e, type: 3}
+  - {fileID: -4558313135716986503, guid: b2092cee4e91fd744afa251b7062236a, type: 3}
   - {fileID: -4558313135716986503, guid: b2092cee4e91fd744afa251b7062236a, type: 3}
   - {fileID: -4558313135716986503, guid: b2092cee4e91fd744afa251b7062236a, type: 3}
   - {fileID: -8904824455963942484, guid: 28c199a057bf51148adb9e49e9ab70dd, type: 3}
