@@ -22,7 +22,6 @@ public class PlayerHealthUI : MonoBehaviour
 
     void Start()
     {
-        PlayerStats.Instance.onHealthChangedCallback += UpdateHearts;
         UpdateHearts(); // Initialize
     }
 
