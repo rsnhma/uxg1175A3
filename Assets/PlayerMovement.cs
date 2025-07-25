@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Security.Cryptography;
+using UnityEngine;
+using UnityEngine.Rendering;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -26,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject beamgunObject;
     private GameObject currentBeam;
 
-    private enum WeaponType { Handgun, Beam, Potion }
+    private enum WeaponType { Handgun, Beam, Potion, Dagger }
     private WeaponType currentWeapon = WeaponType.Handgun;
 
     // Bullet ammo & cooldown
@@ -49,6 +51,16 @@ public class PlayerMovement : MonoBehaviour
     private int potionThrowsLeft = 5;
     private float potionCooldownTimer = 0f;
     private bool potionOnCooldown = false;
+
+    // Dagger Throwing
+    public GameObject daggerPrefab;
+    public Transform throwPoint1;
+    public float throwForce1 = 10f;
+
+    // Dagger throwing cooldown
+    private int daggerThrowsLeft = 5;
+    private float daggerCooldownTimer = 0f;
+    private bool daggerOnCooldown = false;
 
     public Vector2 startFacingDirection = new Vector2(0, -1);
 
@@ -115,7 +127,15 @@ public class PlayerMovement : MonoBehaviour
             currentWeapon = WeaponType.Potion;
             StopBeam(); // Just in case beam is active
             SwitchWeaponVisuals();
-        }   
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.Alpha4)) // Select potion
+        {
+            currentWeapon = WeaponType.Dagger;
+            StopBeam(); // Just in case beam is active
+            SwitchWeaponVisuals();
+        }
 
         // Fire input
         if (Input.GetKeyDown(KeyCode.Space))
@@ -126,6 +146,8 @@ public class PlayerMovement : MonoBehaviour
                 StartBeam();
             else if (currentWeapon == WeaponType.Potion)
                 ThrowPotion();
+            else if (currentWeapon == WeaponType.Dagger)
+                ThrowDagger();
         }
 
         HandleBeamHold();
@@ -169,6 +191,16 @@ public class PlayerMovement : MonoBehaviour
             {
                 potionThrowsLeft = 5;
                 potionOnCooldown = false;
+            }
+        }
+
+        if (daggerOnCooldown)
+        {
+            daggerCooldownTimer -= Time.deltaTime;
+            if (daggerCooldownTimer <= 0f)
+            {
+                daggerThrowsLeft = 5;
+                daggerOnCooldown = false;
             }
         }
     }
@@ -401,5 +433,44 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    void ThrowDagger()
+    {
+        if (daggerOnCooldown)
+            return;
 
+        if (daggerThrowsLeft <= 0)
+        {
+            potionOnCooldown = true;
+            potionCooldownTimer = 5f; // cooldown duration
+            return;
+        }
+
+        daggerThrowsLeft--;
+
+        Vector2 throwDirection = lastMoveDir != Vector2.zero ? lastMoveDir.normalized : Vector2.right;
+
+        if (daggerPrefab == null || throwPoint == null)
+        {
+            Debug.LogWarning("Missing daggerPrefab or throwPoint.");
+            return;
+        }
+
+        GameObject potion = Instantiate(daggerPrefab, throwPoint1.position, Quaternion.identity);
+
+        Rigidbody2D rb = potion.GetComponent<Rigidbody2D>();
+        Collider2D daggerCollider = potion.GetComponent<Collider2D>();
+        Collider2D playerCollider = GetComponent<Collider2D>();
+
+        if (rb != null)
+            rb.AddForce(throwDirection * throwForce, ForceMode2D.Impulse);
+
+        if (playerCollider != null && daggerCollider != null)
+            Physics2D.IgnoreCollision(daggerCollider, playerCollider);
+
+        if (daggerThrowsLeft <= 0)
+        {
+            daggerOnCooldown = true;
+            daggerCooldownTimer = 5f;
+        }
+    }
 }
