@@ -19,7 +19,7 @@ public class Dagger : MonoBehaviour
 
     void Start()
     {
-        rb.AddForce(transform.right * forceAmount, ForceMode2D.Impulse);
+
     }
 
     void Update()
@@ -44,15 +44,16 @@ public class Dagger : MonoBehaviour
             Instantiate(hitEffect, transform.position, Quaternion.identity);
         }
 
-        EnemyBehaviour enemy = other.GetComponent<EnemyBehaviour>();
+        EnemyBehaviour enemy = other.GetComponentInParent<EnemyBehaviour>(); // safer than GetComponent
         if (enemy != null)
         {
+            Debug.Log("Dagger hit enemy: " + other.name);
             enemy.TakeDamage(damage);
             Destroy(gameObject, 0.1f);
         }
         else
         {
-            Destroy(gameObject, 2f); // Short delay so effect can play
+            Destroy(gameObject, 2f);
         }
     }
 }
