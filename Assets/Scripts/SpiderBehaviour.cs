@@ -2,60 +2,86 @@ using UnityEngine;
 
 public class SpiderBehaviour : EnemyBehaviour
 {
+    [Header("Spider Stats")]
     public float moveSpeed = 3.0f;
-    [Range(0f, 1f)]
-    public float dodgeChance = 0.3f;
-    public float dodgeDistance = 1.5f; // how far to dodge
-    public float dodgeSpeed = 10f;     // how fast the dodge happens
 
-    private bool isDodging = false;
-    private Vector2 dodgeTarget;
+    [Range(0f, 1f)]
+    public float armorChance = 0.4f; // chance to activate armor when hit
+    public float armorDuration = 2.0f;
+    public int maxArmorUses = 5;
+
+    private bool isArmored = false;
+    private float armorTimer = 0f;
+    private int armorUsesLeft;
 
     public Animator animator;
 
-    private float biteCooldown = 2f; // spider stun
+    [Header("Player Bite")]
+    public float biteCooldown = 2f;
     private float biteTimer = 0f;
+
+    [Header("Visuals")]
+    public SpriteRenderer spriteRenderer; // assign in Inspector
+    public Color armoredColor = Color.black;
+    private Color originalColor;
+
+    public GameObject armorText; // UI text or exclamation icon for armor
+
+    [Header("Awareness UI")]
+    public GameObject exclamationMark;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        originalColor = spriteRenderer.color;
+        if (armorText != null) armorText.SetActive(false);
+        armorUsesLeft = maxArmorUses;
+    }
 
     protected override void UpdateTargetDirection()
     {
-        if (biteTimer > 0f)
+        if (isArmored)
         {
-            biteTimer -= Time.deltaTime;
-            targetDirection = Vector2.zero; // stop moving while stunned
+            armorTimer -= Time.deltaTime;
 
-            animator.speed = 0f; // PAUSE anim when stunned
+            // Stop movement while armored
+            targetDirection = Vector2.zero;
+            rb.linearVelocity = Vector2.zero;
+
+            if (armorTimer <= 0f)
+            {
+                isArmored = false;
+                spriteRenderer.color = originalColor;
+                if (armorText != null) armorText.SetActive(false);
+            }
+
+            animator.speed = 0f;
             return;
         }
         else
         {
-            animator.speed = 1f; // RESUME when unstunned
+            animator.speed = 1f; // resume anims if not armored
         }
 
-        if (isDodging)
-        {
-            // Move towards the dodge target
-            Vector2 direction = (dodgeTarget - (Vector2)transform.position).normalized;
-            rb.linearVelocity = direction * dodgeSpeed;
-
-            // If close enough, stop dodging
-            if (Vector2.Distance(transform.position, dodgeTarget) < 0.1f)
-            {
-                isDodging = false;
-            }
-        }
-        else if (awareness.AwareOfPlayer)
+        // Chase or roam
+        if (awareness.AwareOfPlayer)
         {
             targetDirection = awareness.DirectionToPlayer;
+
+            if (exclamationMark != null && !exclamationMark.activeSelf)
+                exclamationMark.SetActive(true);
         }
         else
         {
             HandleRoam();
             targetDirection = roamDirection;
+
+            if (exclamationMark != null && exclamationMark.activeSelf)
+                exclamationMark.SetActive(false);
         }
 
         if (targetDirection.magnitude > 0.01f)
         {
-
             animator.SetFloat("MoveX", targetDirection.x);
             animator.SetFloat("MoveY", targetDirection.y);
         }
@@ -68,19 +94,24 @@ public class SpiderBehaviour : EnemyBehaviour
 
     public override void TakeDamage(float amount)
     {
-        if (Random.value <= dodgeChance && !isDodging)
+        if (isArmored)
         {
-            Debug.Log("Spider dodged by moving!");
+            Debug.Log("Spider is armored! No damage taken.");
+            return;
+        }
 
-            // Pick a dodge direction perpendicular to player direction
-            Vector2 toPlayer = awareness.DirectionToPlayer;
-            Vector2 dodgeDir = Vector2.Perpendicular(toPlayer).normalized;
+        if (armorUsesLeft > 0 && Random.value <= armorChance)
+        {
+            armorUsesLeft--;
+            Debug.Log($"Spider activated armor! Uses left: {armorUsesLeft}");
 
-            // Randomly flip left or right
-            if (Random.value < 0.5f) dodgeDir *= -1;
+            isArmored = true;
+            armorTimer = armorDuration;
 
-            dodgeTarget = (Vector2)transform.position + dodgeDir * dodgeDistance;
-            isDodging = true;
+            spriteRenderer.color = armoredColor;
+            if (armorText != null) armorText.SetActive(true);
+
+            rb.linearVelocity = Vector2.zero; // stop immediately
 
             return; // skip damage
         }
@@ -88,13 +119,19 @@ public class SpiderBehaviour : EnemyBehaviour
         base.TakeDamage(amount);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.CompareTag("Player") && biteTimer <= 0f)
+        if (other.CompareTag("Player") && biteTimer <= 0f)
         {
             PlayerStats.Instance.TakeDamage(2f);
-            Debug.Log("PLayer took 2 damage from Spider");
+            Debug.Log("Player took 2 damage from Spider");
             biteTimer = biteCooldown;
         }
+    }
+
+    private void Update()
+    {
+        if (biteTimer > 0f)
+            biteTimer -= Time.deltaTime;
     }
 }
