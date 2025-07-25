@@ -62,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
         if (beamWeaponHoldPoint != null)
             beamWeaponRenderer = beamWeaponHoldPoint.GetComponentInChildren<SpriteRenderer>();
 
-
+        
         if (startFacingDirection != Vector2.zero)
             lastMoveDir = startFacingDirection.normalized;
         else
@@ -115,7 +115,7 @@ public class PlayerMovement : MonoBehaviour
             currentWeapon = WeaponType.Potion;
             StopBeam(); // Just in case beam is active
             SwitchWeaponVisuals();
-        }
+        }   
 
         // Fire input
         if (Input.GetKeyDown(KeyCode.Space))
