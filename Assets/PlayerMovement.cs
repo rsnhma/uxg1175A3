@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Security.Cryptography;
+using UnityEngine;
+using UnityEngine.Rendering;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -26,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject beamgunObject;
     private GameObject currentBeam;
 
-    private enum WeaponType { Handgun, Beam }
+    private enum WeaponType { Handgun, Beam, Potion, Dagger }
     private WeaponType currentWeapon = WeaponType.Handgun;
 
     // Bullet ammo & cooldown
@@ -39,6 +41,26 @@ public class PlayerMovement : MonoBehaviour
     private float beamCooldownTimer = 0f;
     private bool beamOnCooldown = false;
     private bool beamIsFiring = false;
+
+    // Potion Throwing
+    public GameObject potionPrefab;
+    public Transform throwPoint;
+    public float throwForce = 10f;
+
+    // Potion throwing cooldown
+    private int potionThrowsLeft = 5;
+    private float potionCooldownTimer = 0f;
+    private bool potionOnCooldown = false;
+
+    // Dagger Throwing
+    public GameObject daggerPrefab;
+    public Transform throwPoint1;
+    public float throwForce1 = 10f;
+
+    // Dagger throwing cooldown
+    private int daggerThrowsLeft = 5;
+    private float daggerCooldownTimer = 0f;
+    private bool daggerOnCooldown = false;
 
     public Vector2 startFacingDirection = new Vector2(0, -1);
 
@@ -100,6 +122,21 @@ public class PlayerMovement : MonoBehaviour
             SwitchWeaponVisuals();
         }
 
+        if (Input.GetKeyDown(KeyCode.Alpha3)) // Select potion
+        {
+            currentWeapon = WeaponType.Potion;
+            StopBeam(); // Just in case beam is active
+            SwitchWeaponVisuals();
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.Alpha4)) // Select potion
+        {
+            currentWeapon = WeaponType.Dagger;
+            StopBeam(); // Just in case beam is active
+            SwitchWeaponVisuals();
+        }
+
         // Fire input
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -107,6 +144,10 @@ public class PlayerMovement : MonoBehaviour
                 TryShootBullet();
             else if (currentWeapon == WeaponType.Beam)
                 StartBeam();
+            else if (currentWeapon == WeaponType.Potion)
+                ThrowPotion();
+            else if (currentWeapon == WeaponType.Dagger)
+                ThrowDagger();
         }
 
         HandleBeamHold();
@@ -142,7 +183,40 @@ public class PlayerMovement : MonoBehaviour
                 beamOnCooldown = false;
             }
         }
+
+        if (potionOnCooldown)
+        {
+            potionCooldownTimer -= Time.deltaTime;
+            if (potionCooldownTimer <= 0f)
+            {
+                potionThrowsLeft = 5;
+                potionOnCooldown = false;
+            }
+        }
+
+        if (daggerOnCooldown)
+        {
+            daggerCooldownTimer -= Time.deltaTime;
+            if (daggerCooldownTimer <= 0f)
+            {
+                daggerThrowsLeft = 5;
+                daggerOnCooldown = false;
+            }
+        }
     }
+
+    public void SetInitialFacingDirection(Vector2 direction)
+    {
+        lastMoveDir = direction.normalized;
+
+        // Update animator so it shows the correct idle pose
+        animator.SetFloat("lastMoveX", lastMoveDir.x);
+        animator.SetFloat("lastMoveY", lastMoveDir.y);
+
+        UpdateWeaponDirection();
+        UpdateBeamWeaponDirection();
+    }
+
 
     void SwitchWeaponVisuals()
     {
@@ -271,6 +345,29 @@ public class PlayerMovement : MonoBehaviour
         {
             currentBeam.transform.position = beamBarrelExit.position;
             currentBeam.transform.right = lastMoveDir;
+
+            float maxDistance = 10f;
+
+            // Create a combined LayerMask for Border and Walls
+            LayerMask wallLayers = LayerMask.GetMask("Border", "Walls");
+
+            // Raycast for anything in the wallLayers
+            RaycastHit2D wallHit = Physics2D.Raycast(beamBarrelExit.position, lastMoveDir, maxDistance, wallLayers);
+
+            // Raycast for enemies (no layer mask so it hits anything)
+            RaycastHit2D enemyHit = Physics2D.Raycast(beamBarrelExit.position, lastMoveDir, maxDistance);
+
+            float wallDist = wallHit.collider != null ? wallHit.distance : maxDistance;
+            float enemyDist = (enemyHit.collider != null && enemyHit.collider.CompareTag("Enemy")) ? enemyHit.distance : maxDistance;
+
+            // Use whichever hit is closer
+            float actualDistance = Mathf.Min(wallDist, enemyDist);
+
+            // Shorten beam to that distance
+            currentBeam.transform.localScale = new Vector3(actualDistance, currentBeam.transform.localScale.y, 1f);
+
+            // Debug line
+            Debug.DrawRay(beamBarrelExit.position, lastMoveDir * actualDistance, Color.red);
         }
 
         if (beamHoldTime >= 5f)
@@ -280,6 +377,8 @@ public class PlayerMovement : MonoBehaviour
             beamCooldownTimer = 5f;
         }
     }
+
+
 
     void StopBeam()
     {
@@ -292,4 +391,92 @@ public class PlayerMovement : MonoBehaviour
         beamIsFiring = false;
         beamHoldTime = 0f;
     }
+
+    void ThrowPotion()
+    {
+        if (potionOnCooldown)
+            return;
+
+        if (potionThrowsLeft <= 0)
+        {
+            potionOnCooldown = true;
+            potionCooldownTimer = 5f; // cooldown duration
+            return;
+        }
+
+        potionThrowsLeft--;
+
+        Vector2 throwDirection = lastMoveDir != Vector2.zero ? lastMoveDir.normalized : Vector2.right;
+
+        if (potionPrefab == null || throwPoint == null)
+        {
+            Debug.LogWarning("Missing potionPrefab or throwPoint.");
+            return;
+        }
+
+        GameObject potion = Instantiate(potionPrefab, throwPoint.position, Quaternion.identity);
+
+        Rigidbody2D rb = potion.GetComponent<Rigidbody2D>();
+        Collider2D potionCollider = potion.GetComponent<Collider2D>();
+        Collider2D playerCollider = GetComponent<Collider2D>();
+
+        if (rb != null)
+            rb.AddForce(throwDirection * throwForce, ForceMode2D.Impulse);
+
+        if (playerCollider != null && potionCollider != null)
+            Physics2D.IgnoreCollision(potionCollider, playerCollider);
+
+        if (potionThrowsLeft <= 0)
+        {
+            potionOnCooldown = true;
+            potionCooldownTimer = 5f;
+        }
+    }
+
+    void ThrowDagger()
+    {
+        if (daggerOnCooldown) return;
+
+        if (daggerThrowsLeft <= 0)
+        {
+            daggerOnCooldown = true;
+            daggerCooldownTimer = 5f;
+            return;
+        }
+
+        daggerThrowsLeft--;
+
+        Vector2 throwDirection = lastMoveDir != Vector2.zero ? lastMoveDir.normalized : Vector2.right;
+
+        if (daggerPrefab == null || throwPoint1 == null)
+        {
+            Debug.LogWarning("Missing daggerPrefab or throwPoint1.");
+            return;
+        }
+
+        float angle = Mathf.Atan2(throwDirection.y, throwDirection.x) * Mathf.Rad2Deg;
+        Quaternion rotation = Quaternion.Euler(0, 0, angle - 90f);
+
+        // Instantiate dagger with correct rotation
+        GameObject dagger = Instantiate(daggerPrefab, throwPoint1.position, rotation);
+
+        // Add force using the exact same throwDirection
+        Rigidbody2D rb = dagger.GetComponent<Rigidbody2D>();
+        Collider2D daggerCollider = dagger.GetComponent<Collider2D>();
+        Collider2D playerCollider = GetComponent<Collider2D>();
+
+        if (rb != null)
+            rb.AddForce(throwDirection * throwForce1, ForceMode2D.Impulse);
+
+        if (playerCollider != null && daggerCollider != null)
+            Physics2D.IgnoreCollision(daggerCollider, playerCollider);
+
+        if (daggerThrowsLeft <= 0)
+        {
+            daggerOnCooldown = true;
+            daggerCooldownTimer = 5f;
+        }
+    }
+
+
 }
