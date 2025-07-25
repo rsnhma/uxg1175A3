@@ -20,7 +20,7 @@ public class EnemyWaveManager : MonoBehaviour
 
     private void Awake()
     {
-        //Instance = this;
+        Instance = this;
         LoadWaveData();
     }
 
