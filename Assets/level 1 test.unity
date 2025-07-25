@@ -6930,9 +6930,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterPrefabs:
-  - {fileID: 2761938752306913146, guid: 542d3581cec3c9d48ba9a6782e0051af, type: 3}
-  - {fileID: 7951529159122835681, guid: 283cfc5dbc5a63246a95bc762e15b817, type: 3}
-  - {fileID: 7463286916890972549, guid: 71e605bb6256ba04fadc657770b3b09e, type: 3}
+  - {fileID: 4904152544008084400, guid: d45bba9ce1a72df478ffacfdc85b700a, type: 3}
+  - {fileID: 1707679732842823564, guid: 8ea35c8e0aa85da47a3af22caea56054, type: 3}
+  - {fileID: 3401142080922124520, guid: 8f26ef16224f763468a4188f43e5c30f, type: 3}
   spawnPoint: {fileID: 1976048217}
   facingDirectionForSpawn: {x: 1, y: 0}
 --- !u!4 &909949532

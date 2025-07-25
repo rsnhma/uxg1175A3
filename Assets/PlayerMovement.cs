@@ -435,13 +435,12 @@ public class PlayerMovement : MonoBehaviour
 
     void ThrowDagger()
     {
-        if (daggerOnCooldown)
-            return;
+        if (daggerOnCooldown) return;
 
         if (daggerThrowsLeft <= 0)
         {
-            potionOnCooldown = true;
-            potionCooldownTimer = 5f; // cooldown duration
+            daggerOnCooldown = true;
+            daggerCooldownTimer = 5f;
             return;
         }
 
@@ -449,20 +448,25 @@ public class PlayerMovement : MonoBehaviour
 
         Vector2 throwDirection = lastMoveDir != Vector2.zero ? lastMoveDir.normalized : Vector2.right;
 
-        if (daggerPrefab == null || throwPoint == null)
+        if (daggerPrefab == null || throwPoint1 == null)
         {
-            Debug.LogWarning("Missing daggerPrefab or throwPoint.");
+            Debug.LogWarning("Missing daggerPrefab or throwPoint1.");
             return;
         }
 
-        GameObject potion = Instantiate(daggerPrefab, throwPoint1.position, Quaternion.identity);
+        float angle = Mathf.Atan2(throwDirection.y, throwDirection.x) * Mathf.Rad2Deg;
+        Quaternion rotation = Quaternion.Euler(0, 0, angle - 90f);
 
-        Rigidbody2D rb = potion.GetComponent<Rigidbody2D>();
-        Collider2D daggerCollider = potion.GetComponent<Collider2D>();
+        // Instantiate dagger with correct rotation
+        GameObject dagger = Instantiate(daggerPrefab, throwPoint1.position, rotation);
+
+        // Add force using the exact same throwDirection
+        Rigidbody2D rb = dagger.GetComponent<Rigidbody2D>();
+        Collider2D daggerCollider = dagger.GetComponent<Collider2D>();
         Collider2D playerCollider = GetComponent<Collider2D>();
 
         if (rb != null)
-            rb.AddForce(throwDirection * throwForce, ForceMode2D.Impulse);
+            rb.AddForce(throwDirection * throwForce1, ForceMode2D.Impulse);
 
         if (playerCollider != null && daggerCollider != null)
             Physics2D.IgnoreCollision(daggerCollider, playerCollider);
@@ -473,4 +477,6 @@ public class PlayerMovement : MonoBehaviour
             daggerCooldownTimer = 5f;
         }
     }
+
+
 }
