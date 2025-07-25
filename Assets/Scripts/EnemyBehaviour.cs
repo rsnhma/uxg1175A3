@@ -30,10 +30,11 @@ public class EnemyBehaviour : MonoBehaviour
         damageToPlayer = data.damageToPlayer;
     }
 
-    private void Awake()
+    protected virtual void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         awareness = GetComponent<EnemyPlayerAwareness>();
+
     }
 
     private void Start()
@@ -105,6 +106,7 @@ public class EnemyBehaviour : MonoBehaviour
                 rb.linearVelocity = Vector2.zero;
                 return;
             }
+
         }
 
         float speed = awareness.AwareOfPlayer ? GetChaseSpeed() : roamSpeed;
