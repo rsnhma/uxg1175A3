@@ -15,6 +15,10 @@ public class CharacterSpawner : MonoBehaviour
         {
             // Instantiate the selected character prefab
             GameObject player = Instantiate(characterPrefabs[index], spawnPoint.position, Quaternion.identity);
+             if (GameManager.Instance != null)
+            {
+                GameManager.Instance.SetPlayer(player);
+            }
 
             // Set initial facing direction using method in PlayerMovement
             PlayerMovement movement = player.GetComponent<PlayerMovement>();
