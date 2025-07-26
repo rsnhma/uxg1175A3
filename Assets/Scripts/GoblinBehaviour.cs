@@ -12,6 +12,7 @@ public class GoblinBehaviour : EnemyBehaviour
 
     public Animator animator;
 
+    [Header("Awareness UI")]
     public GameObject exclamationMark;
     protected override void UpdateTargetDirection()
     {
