@@ -3,8 +3,10 @@ using UnityEngine.SceneManagement;
 
 public class LevelExit : MonoBehaviour
 {
-    [Header("Optional")]
-    public GameObject levelCompleteUI; // assign a different canvas here
+    [Header("UI References")]
+    public GameObject levelCompleteUI;   // Assigned in Inspector
+    public GameObject keycardWarningUI;  // <-- NEW: Assign your "Need keycard" popup
+    public float warningDuration = 2f;   // Time to show the warning popup
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -27,6 +29,21 @@ public class LevelExit : MonoBehaviour
         else
         {
             Debug.Log("Exit locked. Find the keycard first!");
+
+            if (keycardWarningUI != null)
+            {
+                keycardWarningUI.SetActive(true);
+                CancelInvoke(nameof(HideWarning)); // prevent overlap
+                Invoke(nameof(HideWarning), warningDuration);
+            }
+        }
+    }
+
+    void HideWarning()
+    {
+        if (keycardWarningUI != null)
+        {
+            keycardWarningUI.SetActive(false);
         }
     }
 }
