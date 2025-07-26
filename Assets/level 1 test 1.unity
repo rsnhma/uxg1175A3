@@ -1868,7 +1868,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &125878528
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4809,7 +4809,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &564225437
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10943,6 +10943,12 @@ MonoBehaviour:
   beamBarrelExit: {fileID: 0}
   beamPrefab: {fileID: 0}
   beamgunObject: {fileID: 0}
+  potionPrefab: {fileID: 0}
+  throwPoint: {fileID: 0}
+  throwForce: 10
+  daggerPrefab: {fileID: 0}
+  throwPoint1: {fileID: 0}
+  throwForce1: 10
   startFacingDirection: {x: 0, y: -1}
 --- !u!95 &1178737066
 Animator:
