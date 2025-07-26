@@ -6,6 +6,8 @@ public class LevelExit : MonoBehaviour
     [Header("Optional")]
     public GameObject gameOverUI; // Assign if you have a UI popup (Canvas)
 
+
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
