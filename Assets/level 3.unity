@@ -476,7 +476,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 20454791}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -510,7 +510,7 @@ GameObject:
   m_Component:
   - component: {fileID: 24901723}
   - component: {fileID: 24901724}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -851,7 +851,7 @@ GameObject:
   m_Component:
   - component: {fileID: 34947155}
   - component: {fileID: 34947156}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1473,7 +1473,7 @@ GameObject:
   m_Component:
   - component: {fileID: 75557979}
   - component: {fileID: 75557980}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1722,7 +1722,7 @@ GameObject:
   m_Component:
   - component: {fileID: 95142147}
   - component: {fileID: 95142148}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider spritesheet flipped_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1808,7 +1808,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 105141507}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1929,7 +1929,7 @@ GameObject:
   m_Component:
   - component: {fileID: 110075416}
   - component: {fileID: 110075417}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_19 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2103,7 +2103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 111796915}
   - component: {fileID: 111796916}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: monochrome-transparent_12 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2189,7 +2189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 117205759}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2224,7 +2224,7 @@ GameObject:
   - component: {fileID: 117272224}
   - component: {fileID: 117272226}
   - component: {fileID: 117272225}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2358,7 +2358,7 @@ GameObject:
   - component: {fileID: 120654660}
   - component: {fileID: 120654661}
   - component: {fileID: 120654662}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_66 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2491,7 +2491,7 @@ GameObject:
   m_Component:
   - component: {fileID: 122903722}
   - component: {fileID: 122903723}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2655,37 +2655,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &129032661
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 129032662}
-  m_Layer: 0
-  m_Name: SpawnPoint2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &129032662
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 129032661}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.13, y: -12.24, z: -0.000005917973}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &144820212
 GameObject:
   m_ObjectHideFlags: 0
@@ -2695,7 +2664,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 144820213}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2728,7 +2697,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 173112725}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: green puddle (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2805,7 +2774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 175249404}
   - component: {fileID: 175249405}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2892,7 +2861,7 @@ GameObject:
   m_Component:
   - component: {fileID: 186573859}
   - component: {fileID: 186573860}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider spritesheet flipped_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2979,7 +2948,7 @@ GameObject:
   m_Component:
   - component: {fileID: 187048791}
   - component: {fileID: 187048792}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3066,7 +3035,7 @@ GameObject:
   m_Component:
   - component: {fileID: 189170390}
   - component: {fileID: 189170391}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: monochrome-transparent_12 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3338,7 +3307,7 @@ GameObject:
   m_Component:
   - component: {fileID: 208136853}
   - component: {fileID: 208136854}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: monochrome-transparent_12 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3424,7 +3393,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 211811680}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider display (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3460,7 +3429,7 @@ GameObject:
   m_Component:
   - component: {fileID: 214523114}
   - component: {fileID: 214523115}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: splash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3722,7 +3691,7 @@ GameObject:
   m_Component:
   - component: {fileID: 231329862}
   - component: {fileID: 231329863}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: splash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3897,7 +3866,7 @@ GameObject:
   - component: {fileID: 238260052}
   - component: {fileID: 238260053}
   - component: {fileID: 238260054}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_66 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4476,7 +4445,7 @@ GameObject:
   m_Component:
   - component: {fileID: 246916386}
   - component: {fileID: 246916387}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4562,7 +4531,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 247705445}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4770,7 +4739,7 @@ GameObject:
   m_Component:
   - component: {fileID: 256513414}
   - component: {fileID: 256513415}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: splash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4932,7 +4901,7 @@ GameObject:
   m_Component:
   - component: {fileID: 262160766}
   - component: {fileID: 262160767}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5018,7 +4987,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 267128443}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5362,7 +5331,7 @@ GameObject:
   m_Component:
   - component: {fileID: 287348347}
   - component: {fileID: 287348348}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5449,7 +5418,7 @@ GameObject:
   m_Component:
   - component: {fileID: 291247339}
   - component: {fileID: 291247340}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31238,7 +31207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 301129997}
   - component: {fileID: 301129998}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider spritesheet flipped_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31315,79 +31284,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &304161140
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4130150410164267797, guid: a32bd635f47099f4bb4858bf5eaf0c34, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.61
-      objectReference: {fileID: 0}
-    - target: {fileID: 4130150410164267797, guid: a32bd635f47099f4bb4858bf5eaf0c34, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.53
-      objectReference: {fileID: 0}
-    - target: {fileID: 4130150410164267797, guid: a32bd635f47099f4bb4858bf5eaf0c34, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.000005917973
-      objectReference: {fileID: 0}
-    - target: {fileID: 4130150410164267797, guid: a32bd635f47099f4bb4858bf5eaf0c34, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4130150410164267797, guid: a32bd635f47099f4bb4858bf5eaf0c34, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4130150410164267797, guid: a32bd635f47099f4bb4858bf5eaf0c34, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4130150410164267797, guid: a32bd635f47099f4bb4858bf5eaf0c34, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4130150410164267797, guid: a32bd635f47099f4bb4858bf5eaf0c34, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4130150410164267797, guid: a32bd635f47099f4bb4858bf5eaf0c34, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4130150410164267797, guid: a32bd635f47099f4bb4858bf5eaf0c34, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4482055078467713593, guid: a32bd635f47099f4bb4858bf5eaf0c34, type: 3}
-      propertyPath: m_Name
-      value: EnemySpawner
-      objectReference: {fileID: 0}
-    - target: {fileID: 5186541073136368916, guid: a32bd635f47099f4bb4858bf5eaf0c34, type: 3}
-      propertyPath: spawnPoint1
-      value: 
-      objectReference: {fileID: 948820900}
-    - target: {fileID: 5186541073136368916, guid: a32bd635f47099f4bb4858bf5eaf0c34, type: 3}
-      propertyPath: spawnPoint2
-      value: 
-      objectReference: {fileID: 129032662}
-    - target: {fileID: 5186541073136368916, guid: a32bd635f47099f4bb4858bf5eaf0c34, type: 3}
-      propertyPath: spawnPoint3
-      value: 
-      objectReference: {fileID: 1088894521}
-    - target: {fileID: 5186541073136368916, guid: a32bd635f47099f4bb4858bf5eaf0c34, type: 3}
-      propertyPath: spiderPrefab
-      value: 
-      objectReference: {fileID: 1934573941150859375, guid: 607a3647fd5638c408ccc42080a5ee6a, type: 3}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a32bd635f47099f4bb4858bf5eaf0c34, type: 3}
 --- !u!1 &308158135
 GameObject:
   m_ObjectHideFlags: 0
@@ -31397,7 +31293,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 308158136}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31567,7 +31463,7 @@ GameObject:
   m_Component:
   - component: {fileID: 318861996}
   - component: {fileID: 318861997}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31654,7 +31550,7 @@ GameObject:
   m_Component:
   - component: {fileID: 320484115}
   - component: {fileID: 320484116}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider spritesheet flipped_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31740,7 +31636,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 322450466}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31809,7 +31705,7 @@ GameObject:
   m_Component:
   - component: {fileID: 335011393}
   - component: {fileID: 335011394}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider spritesheet flipped_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31896,7 +31792,7 @@ GameObject:
   m_Component:
   - component: {fileID: 339877139}
   - component: {fileID: 339877140}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: monochrome-transparent_12 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31983,7 +31879,7 @@ GameObject:
   m_Component:
   - component: {fileID: 345808127}
   - component: {fileID: 345808128}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_19 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32070,7 +31966,7 @@ GameObject:
   m_Component:
   - component: {fileID: 358171152}
   - component: {fileID: 358171153}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider spritesheet flipped_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32310,7 +32206,7 @@ GameObject:
   m_Component:
   - component: {fileID: 390290762}
   - component: {fileID: 390290763}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spillage (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32397,7 +32293,7 @@ GameObject:
   m_Component:
   - component: {fileID: 392548214}
   - component: {fileID: 392548215}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_19 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32571,7 +32467,7 @@ GameObject:
   m_Component:
   - component: {fileID: 403212542}
   - component: {fileID: 403212543}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_19 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32658,7 +32554,7 @@ GameObject:
   m_Component:
   - component: {fileID: 408030985}
   - component: {fileID: 408030986}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider spritesheet flipped_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32746,7 +32642,7 @@ GameObject:
   - component: {fileID: 408353723}
   - component: {fileID: 408353725}
   - component: {fileID: 408353724}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: background overlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33659,7 +33555,7 @@ GameObject:
   m_Component:
   - component: {fileID: 429187272}
   - component: {fileID: 429187273}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: monochrome-transparent_12 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33833,7 +33729,7 @@ GameObject:
   m_Component:
   - component: {fileID: 431894713}
   - component: {fileID: 431894714}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34056,7 +33952,7 @@ GameObject:
   m_Component:
   - component: {fileID: 444538477}
   - component: {fileID: 444538478}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider spritesheet flipped_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34143,7 +34039,7 @@ GameObject:
   m_Component:
   - component: {fileID: 445384066}
   - component: {fileID: 445384065}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: green spillage (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34230,7 +34126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 446874828}
   - component: {fileID: 446874829}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34317,7 +34213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 454729656}
   - component: {fileID: 454729657}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34404,7 +34300,7 @@ GameObject:
   m_Component:
   - component: {fileID: 455609705}
   - component: {fileID: 455609706}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_46
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34491,7 +34387,7 @@ GameObject:
   m_Component:
   - component: {fileID: 459250043}
   - component: {fileID: 459250044}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34665,7 +34561,7 @@ GameObject:
   m_Component:
   - component: {fileID: 464532158}
   - component: {fileID: 464532159}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34752,7 +34648,7 @@ GameObject:
   m_Component:
   - component: {fileID: 468998690}
   - component: {fileID: 468998691}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34838,7 +34734,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 473138378}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider display (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34959,11 +34855,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 192359073}
-  m_Father: {fileID: 624548288}
+  m_Father: {fileID: 773517266}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 960, y: 540}
+  m_AnchoredPosition: {x: -776, y: -394}
   m_SizeDelta: {x: 1080, y: 607.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &486464312
@@ -34975,7 +34871,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 486464313}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: green puddle (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35007,7 +34903,7 @@ GameObject:
   m_Component:
   - component: {fileID: 487169807}
   - component: {fileID: 487169808}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider spritesheet flipped_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35169,7 +35065,7 @@ GameObject:
   m_Component:
   - component: {fileID: 490064556}
   - component: {fileID: 490064557}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider spritesheet flipped_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35256,7 +35152,7 @@ GameObject:
   m_Component:
   - component: {fileID: 494827208}
   - component: {fileID: 494827209}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_19 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35343,7 +35239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 495582220}
   - component: {fileID: 495582221}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35429,7 +35325,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 498103540}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: item 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35470,7 +35366,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 503002596}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider display (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35505,7 +35401,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 504213671}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35713,7 +35609,7 @@ GameObject:
   m_Component:
   - component: {fileID: 512552961}
   - component: {fileID: 512552962}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35799,7 +35695,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 527287728}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35959,7 +35855,7 @@ GameObject:
   m_Component:
   - component: {fileID: 534681487}
   - component: {fileID: 534681488}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_19 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36046,7 +35942,7 @@ GameObject:
   m_Component:
   - component: {fileID: 537850288}
   - component: {fileID: 537850289}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36133,7 +36029,7 @@ GameObject:
   m_Component:
   - component: {fileID: 540369189}
   - component: {fileID: 540369190}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36219,7 +36115,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 545931030}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider display (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36474,7 +36370,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 558937517}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: item 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36597,7 +36493,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 571030306}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider display (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36632,7 +36528,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 572891664}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36802,7 +36698,7 @@ GameObject:
   m_Component:
   - component: {fileID: 575525937}
   - component: {fileID: 575525938}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36889,7 +36785,7 @@ GameObject:
   m_Component:
   - component: {fileID: 582252927}
   - component: {fileID: 582252928}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36976,7 +36872,7 @@ GameObject:
   m_Component:
   - component: {fileID: 590912283}
   - component: {fileID: 590912284}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37063,7 +36959,7 @@ GameObject:
   m_Component:
   - component: {fileID: 594501466}
   - component: {fileID: 594501467}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_19 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37150,7 +37046,7 @@ GameObject:
   m_Component:
   - component: {fileID: 598301608}
   - component: {fileID: 598301609}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: monochrome-transparent_12 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37237,7 +37133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 603281134}
   - component: {fileID: 603281135}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37314,71 +37210,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &605311455
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2066929058279692118, guid: adc68f6e21ebe384183e3de586be76e8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.429846
-      objectReference: {fileID: 0}
-    - target: {fileID: 2066929058279692118, guid: adc68f6e21ebe384183e3de586be76e8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.9583633
-      objectReference: {fileID: 0}
-    - target: {fileID: 2066929058279692118, guid: adc68f6e21ebe384183e3de586be76e8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.024831664
-      objectReference: {fileID: 0}
-    - target: {fileID: 2066929058279692118, guid: adc68f6e21ebe384183e3de586be76e8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2066929058279692118, guid: adc68f6e21ebe384183e3de586be76e8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2066929058279692118, guid: adc68f6e21ebe384183e3de586be76e8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2066929058279692118, guid: adc68f6e21ebe384183e3de586be76e8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2066929058279692118, guid: adc68f6e21ebe384183e3de586be76e8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2066929058279692118, guid: adc68f6e21ebe384183e3de586be76e8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2066929058279692118, guid: adc68f6e21ebe384183e3de586be76e8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2147851438440916638, guid: adc68f6e21ebe384183e3de586be76e8, type: 3}
-      propertyPath: m_Name
-      value: EnemyWaveManger
-      objectReference: {fileID: 0}
-    - target: {fileID: 7965590877733194794, guid: adc68f6e21ebe384183e3de586be76e8, type: 3}
-      propertyPath: spawner
-      value: 
-      objectReference: {fileID: 2130765097}
-    - target: {fileID: 7965590877733194794, guid: adc68f6e21ebe384183e3de586be76e8, type: 3}
-      propertyPath: keycardPrefab
-      value: 
-      objectReference: {fileID: 1276587147932953216, guid: 8b6b9e9a8f15ee140af517b1e04e5e6e, type: 3}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: adc68f6e21ebe384183e3de586be76e8, type: 3}
 --- !u!1 &605573097
 GameObject:
   m_ObjectHideFlags: 0
@@ -37526,7 +37357,7 @@ GameObject:
   - component: {fileID: 619727653}
   - component: {fileID: 619727655}
   - component: {fileID: 619727654}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37770,7 +37601,6 @@ RectTransform:
   - {fileID: 488323381}
   - {fileID: 283293034}
   - {fileID: 773517266}
-  - {fileID: 476984829}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -37921,7 +37751,7 @@ GameObject:
   m_Component:
   - component: {fileID: 637120860}
   - component: {fileID: 637120861}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38277,7 +38107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 679566116}
   - component: {fileID: 679566117}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38450,7 +38280,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 686328632}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SPIDER ESCAPE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38483,7 +38313,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 696276463}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider display (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38518,7 +38348,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 696853808}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider display (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38687,7 +38517,7 @@ GameObject:
   m_Component:
   - component: {fileID: 704514546}
   - component: {fileID: 704514547}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38774,7 +38604,7 @@ GameObject:
   m_Component:
   - component: {fileID: 720258438}
   - component: {fileID: 720258439}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: monochrome-transparent_14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39144,7 +38974,7 @@ GameObject:
   m_Component:
   - component: {fileID: 723952946}
   - component: {fileID: 723952947}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39230,7 +39060,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 728416166}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39264,7 +39094,7 @@ GameObject:
   m_Component:
   - component: {fileID: 729694533}
   - component: {fileID: 729694534}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider spritesheet flipped_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39438,7 +39268,7 @@ GameObject:
   m_Component:
   - component: {fileID: 739912815}
   - component: {fileID: 739912816}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39525,7 +39355,7 @@ GameObject:
   m_Component:
   - component: {fileID: 743325382}
   - component: {fileID: 743325383}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39612,7 +39442,7 @@ GameObject:
   m_Component:
   - component: {fileID: 743861786}
   - component: {fileID: 743861787}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider spritesheet flipped_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39700,7 +39530,7 @@ GameObject:
   - component: {fileID: 757070993}
   - component: {fileID: 757070995}
   - component: {fileID: 757070994}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40074,7 +39904,7 @@ GameObject:
   m_Component:
   - component: {fileID: 760921335}
   - component: {fileID: 760921336}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40297,7 +40127,7 @@ GameObject:
   m_Component:
   - component: {fileID: 764207907}
   - component: {fileID: 764207908}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40478,7 +40308,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 476984829}
   m_Father: {fileID: 624548288}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -40594,7 +40425,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 783273501}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider display (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40708,7 +40539,7 @@ GameObject:
   - component: {fileID: 799147074}
   - component: {fileID: 799147075}
   - component: {fileID: 799147076}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_66 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40841,7 +40672,7 @@ GameObject:
   m_Component:
   - component: {fileID: 800284810}
   - component: {fileID: 800284811}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider spritesheet flipped_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40928,7 +40759,7 @@ GameObject:
   m_Component:
   - component: {fileID: 800577713}
   - component: {fileID: 800577714}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider spritesheet flipped_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41015,7 +40846,7 @@ GameObject:
   m_Component:
   - component: {fileID: 800816691}
   - component: {fileID: 800816692}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41341,7 +41172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 824596365}
   - component: {fileID: 824596364}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spillage (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41515,7 +41346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 831581639}
   - component: {fileID: 831581640}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: splash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41853,7 +41684,7 @@ GameObject:
   m_Component:
   - component: {fileID: 849123856}
   - component: {fileID: 849123857}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spillage (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42250,7 +42081,7 @@ GameObject:
   m_Component:
   - component: {fileID: 863755473}
   - component: {fileID: 863755472}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: green spillage (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42423,7 +42254,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 867081160}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42583,7 +42414,7 @@ GameObject:
   m_Component:
   - component: {fileID: 884500993}
   - component: {fileID: 884500994}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_19 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42670,7 +42501,7 @@ GameObject:
   m_Component:
   - component: {fileID: 891919818}
   - component: {fileID: 891919819}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: monochrome-transparent_12 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42845,7 +42676,7 @@ GameObject:
   - component: {fileID: 903291567}
   - component: {fileID: 903291568}
   - component: {fileID: 903291569}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_66 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42977,7 +42808,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 907745913}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider display (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43174,7 +43005,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 928499390}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider display (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43211,7 +43042,7 @@ GameObject:
   - component: {fileID: 935801701}
   - component: {fileID: 935801702}
   - component: {fileID: 935801703}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_66 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43334,37 +43165,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5768171, y: 0.56197834}
   m_EdgeRadius: 0
---- !u!1 &948820899
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 948820900}
-  m_Layer: 0
-  m_Name: SpawnPoint1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &948820900
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 948820899}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.96, y: -9.94, z: -0.000005917973}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &952041712
 GameObject:
   m_ObjectHideFlags: 0
@@ -43512,7 +43312,7 @@ GameObject:
   m_Component:
   - component: {fileID: 961627136}
   - component: {fileID: 961627137}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_19 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43599,7 +43399,7 @@ GameObject:
   m_Component:
   - component: {fileID: 961989655}
   - component: {fileID: 961989656}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider spritesheet flipped_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43772,7 +43572,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 964898284}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43805,7 +43605,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 975108922}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43839,7 +43639,7 @@ GameObject:
   m_Component:
   - component: {fileID: 989983807}
   - component: {fileID: 989983808}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: splash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44099,7 +43899,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 996463859}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44459,7 +44259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1015740625}
   - component: {fileID: 1015740624}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spillage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44545,7 +44345,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1028028951}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44666,7 +44466,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1035152296}
   - component: {fileID: 1035152297}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44752,7 +44552,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1037497342}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44786,7 +44586,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1039936014}
   - component: {fileID: 1039936015}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44872,7 +44672,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1043491001}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44906,7 +44706,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1045857070}
   - component: {fileID: 1045857071}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44992,7 +44792,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1059028092}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45026,7 +44826,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1065793268}
   - component: {fileID: 1065793269}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45112,7 +44912,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1076467793}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45136,37 +44936,6 @@ Transform:
   - {fileID: 318861996}
   m_Father: {fileID: 1941949817}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1088894520
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1088894521}
-  m_Layer: 0
-  m_Name: SpawnPoint3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1088894521
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1088894520}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.92, y: -5.61, z: -0.000005917973}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1096196046
 GameObject:
   m_ObjectHideFlags: 0
@@ -45177,7 +44946,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1096196047}
   - component: {fileID: 1096196048}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45438,7 +45207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1103226105}
   - component: {fileID: 1103226106}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45524,7 +45293,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1104948807}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: broken display (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45643,7 +45412,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1117953316}
   - component: {fileID: 1117953317}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45844,7 +45613,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1145132487}
   - component: {fileID: 1145132488}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider spritesheet flipped_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45931,7 +45700,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1149689049}
   - component: {fileID: 1149689050}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46231,7 +46000,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1166284937}
   - component: {fileID: 1166284938}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46404,7 +46173,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1170318192}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46627,7 +46396,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1182027083}
   - component: {fileID: 1182027084}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46790,7 +46559,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1184259130}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46824,7 +46593,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1184660759}
   - component: {fileID: 1184660760}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_19 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46911,7 +46680,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1185446241}
   - component: {fileID: 1185446242}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47074,7 +46843,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1187883999}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider display (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47333,7 +47102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1195875489}
   - component: {fileID: 1195875490}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47421,7 +47190,7 @@ GameObject:
   - component: {fileID: 1199999575}
   - component: {fileID: 1199999577}
   - component: {fileID: 1199999576}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47553,7 +47322,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1200942543}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47587,7 +47356,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1201533716}
   - component: {fileID: 1201533717}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47674,7 +47443,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1205241667}
   - component: {fileID: 1205241668}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_46
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47935,7 +47704,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1228174361}
   - component: {fileID: 1228174362}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider spritesheet flipped_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48023,7 +47792,7 @@ GameObject:
   - component: {fileID: 1234426358}
   - component: {fileID: 1234426359}
   - component: {fileID: 1234426360}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48243,7 +48012,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1240794169}
   - component: {fileID: 1240794170}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48329,7 +48098,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1241226912}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48362,7 +48131,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1242806081}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48483,7 +48252,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1244761300}
   - component: {fileID: 1244761301}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48570,7 +48339,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1253789729}
   - component: {fileID: 1253789730}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48657,7 +48426,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1263508895}
   - component: {fileID: 1263508896}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48744,7 +48513,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1266480172}
   - component: {fileID: 1266480171}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spillage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48919,7 +48688,7 @@ GameObject:
   - component: {fileID: 1281256330}
   - component: {fileID: 1281256331}
   - component: {fileID: 1281256332}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_66 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49051,7 +48820,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1289175396}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49084,7 +48853,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1293672095}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49118,7 +48887,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1294482991}
   - component: {fileID: 1294482992}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_19 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49293,7 +49062,7 @@ GameObject:
   - component: {fileID: 1297101452}
   - component: {fileID: 1297101453}
   - component: {fileID: 1297101454}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_66 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49553,7 +49322,7 @@ GameObject:
   - component: {fileID: 1304044079}
   - component: {fileID: 1304044081}
   - component: {fileID: 1304044080}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_66 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49686,7 +49455,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1304268929}
   - component: {fileID: 1304268930}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49772,7 +49541,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1311533059}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: GENERATOR LEFT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49821,7 +49590,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1324555236}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50075,7 +49844,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1338090751}
   - component: {fileID: 1338090752}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50162,7 +49931,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1342751650}
   - component: {fileID: 1342751651}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50250,7 +50019,7 @@ GameObject:
   - component: {fileID: 1343144647}
   - component: {fileID: 1343144648}
   - component: {fileID: 1343144649}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_66 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50470,7 +50239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1351406418}
   - component: {fileID: 1351406419}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider spritesheet flipped_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50645,7 +50414,7 @@ GameObject:
   - component: {fileID: 1356938550}
   - component: {fileID: 1356938551}
   - component: {fileID: 1356938552}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: monochrome-transparent_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50777,7 +50546,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1359085570}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider display (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50813,7 +50582,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1377108585}
   - component: {fileID: 1377108586}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider spritesheet flipped_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50975,7 +50744,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1378207572}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider display (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51097,7 +50866,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1383074373}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: green puddle (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51135,7 +50904,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1383161183}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: DISPLAY SPIDER
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51582,7 +51351,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1399280118}
   - component: {fileID: 1399280119}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51668,7 +51437,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1400237259}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51702,7 +51471,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1406275977}
   - component: {fileID: 1406275978}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51789,7 +51558,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1406706470}
   - component: {fileID: 1406706471}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52152,7 +51921,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1467803081}
   - component: {fileID: 1467803082}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52240,7 +52009,7 @@ GameObject:
   - component: {fileID: 1467961134}
   - component: {fileID: 1467961135}
   - component: {fileID: 1467961136}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_66 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52372,7 +52141,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1468124491}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52617,7 +52386,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1477863440}
   - component: {fileID: 1477863441}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider spritesheet flipped_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52704,7 +52473,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1478878368}
   - component: {fileID: 1478878367}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: green spillage (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52965,7 +52734,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1481651965}
   - component: {fileID: 1481651966}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53052,7 +52821,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1484009839}
   - component: {fileID: 1484009840}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53227,7 +52996,7 @@ GameObject:
   - component: {fileID: 1503260148}
   - component: {fileID: 1503260149}
   - component: {fileID: 1503260150}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_66 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53447,7 +53216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1525450668}
   - component: {fileID: 1525450669}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: railing leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53534,7 +53303,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1527237216}
   - component: {fileID: 1527237217}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: railing leg (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53621,7 +53390,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1533639621}
   - component: {fileID: 1533639622}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53708,7 +53477,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1540722334}
   - component: {fileID: 1540722335}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53969,7 +53738,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1557554556}
   - component: {fileID: 1557554555}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: green spillage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54056,7 +53825,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1569884627}
   - component: {fileID: 1569884628}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider spritesheet flipped_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54142,7 +53911,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1574015123}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54312,7 +54081,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1580384845}
   - component: {fileID: 1580384846}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54399,7 +54168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1586934389}
   - component: {fileID: 1586934390}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider spritesheet flipped_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54486,7 +54255,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1593371398}
   - component: {fileID: 1593371399}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54660,7 +54429,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1600692497}
   - component: {fileID: 1600692498}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_19 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54747,7 +54516,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1601545351}
   - component: {fileID: 1601545352}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: splash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54834,7 +54603,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1602183904}
   - component: {fileID: 1602183905}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_19 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54921,7 +54690,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1606787034}
   - component: {fileID: 1606787035}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: monochrome-transparent_12 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55008,7 +54777,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1607519519}
   - component: {fileID: 1607519520}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55095,7 +54864,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1610302521}
   - component: {fileID: 1610302522}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider spritesheet flipped_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55181,7 +54950,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1612817087}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: 'GENERATOR RIGHT '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55318,7 +55087,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1613426399}
   - component: {fileID: 1613426400}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: monochrome-transparent_12 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55492,7 +55261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1616415305}
   - component: {fileID: 1616415306}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55579,7 +55348,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1617974034}
   - component: {fileID: 1617974035}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider spritesheet flipped_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55802,7 +55571,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1620413496}
   - component: {fileID: 1620413497}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider spritesheet flipped_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55888,7 +55657,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1637915630}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55922,7 +55691,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1641106137}
   - component: {fileID: 1641106138}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56009,7 +55778,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1645675102}
   - component: {fileID: 1645675103}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_66 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56095,7 +55864,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1653554001}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56128,7 +55897,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1655786195}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: item 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56251,7 +56020,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1667050645}
   - component: {fileID: 1667050646}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_19 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56471,7 +56240,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1674886500}
   - component: {fileID: 1674886501}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56557,7 +56326,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1680688953}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56677,7 +56446,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1686192609}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56711,7 +56480,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1694114693}
   - component: {fileID: 1694114694}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56971,7 +56740,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1713823868}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57005,7 +56774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1716063582}
   - component: {fileID: 1716063583}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_66 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57092,7 +56861,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1716341440}
   - component: {fileID: 1716341441}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spillage (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57179,7 +56948,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1721848198}
   - component: {fileID: 1721848199}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57353,7 +57122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1735522008}
   - component: {fileID: 1735522009}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider spritesheet flipped_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57440,7 +57209,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1738268946}
   - component: {fileID: 1738268947}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57602,7 +57371,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1755012922}
   - component: {fileID: 1755012923}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_19 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57853,7 +57622,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1773409391}
   - component: {fileID: 1773409392}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58026,7 +57795,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1775101654}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: 'item 2 '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58150,7 +57919,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1788464612}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58184,7 +57953,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1798621629}
   - component: {fileID: 1798621630}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58359,7 +58128,7 @@ GameObject:
   - component: {fileID: 1811736210}
   - component: {fileID: 1811736211}
   - component: {fileID: 1811736212}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_66 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58493,7 +58262,7 @@ GameObject:
   - component: {fileID: 1830123955}
   - component: {fileID: 1830123956}
   - component: {fileID: 1830123957}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_66 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58626,7 +58395,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1836065231}
   - component: {fileID: 1836065232}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider spritesheet flipped_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58713,7 +58482,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1840767891}
   - component: {fileID: 1840767892}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59088,7 +58857,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1861675111}
   - component: {fileID: 1861675112}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: monochrome-transparent_12 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59311,7 +59080,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1884049937}
   - component: {fileID: 1884049938}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_19 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59398,7 +59167,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1891712931}
   - component: {fileID: 1891712932}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59484,7 +59253,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1897636657}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider display (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59520,7 +59289,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1902380255}
   - component: {fileID: 1902380256}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59607,7 +59376,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1913983431}
   - component: {fileID: 1913983432}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider spritesheet flipped_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60652,7 +60421,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1918963781}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider display (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60727,7 +60496,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1929169411}
   - component: {fileID: 1929169412}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60813,7 +60582,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1931761053}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60996,7 +60765,7 @@ GameObject:
   - component: {fileID: 1940692775}
   - component: {fileID: 1940692777}
   - component: {fileID: 1940692776}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61128,7 +60897,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1941949817}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: decor design
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61190,7 +60959,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1952134467}
   - component: {fileID: 1952134468}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider spritesheet flipped_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61276,7 +61045,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1957746797}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61310,7 +61079,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1960683808}
   - component: {fileID: 1960683809}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_46
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61483,7 +61252,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1979082658}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider display
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61519,7 +61288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1986707097}
   - component: {fileID: 1986707098}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61606,7 +61375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1998801764}
   - component: {fileID: 1998801765}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61692,7 +61461,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2000987484}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider display (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61815,7 +61584,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2007781832}
   - component: {fileID: 2007781833}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62228,7 +61997,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2032397952}
   - component: {fileID: 2032397953}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider spritesheet flipped_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62391,7 +62160,7 @@ GameObject:
   - component: {fileID: 2042776923}
   - component: {fileID: 2042776924}
   - component: {fileID: 2042776925}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_66 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62611,7 +62380,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2063216232}
   - component: {fileID: 2063216233}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_46
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62698,7 +62467,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2067140675}
   - component: {fileID: 2067140676}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider spritesheet flipped_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62784,7 +62553,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2077402025}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: drain floor (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62818,7 +62587,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2081398637}
   - component: {fileID: 2081398638}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62905,7 +62674,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2082173024}
   - component: {fileID: 2082173025}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62994,7 +62763,7 @@ GameObject:
   - component: {fileID: 2084213722}
   - component: {fileID: 2084213721}
   - component: {fileID: 2084213723}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: tilemap border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63966,7 +63735,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2084488030}
   - component: {fileID: 2084488031}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64053,7 +63822,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2088632432}
   - component: {fileID: 2088632433}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64140,7 +63909,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2090272674}
   - component: {fileID: 2090272675}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64227,7 +63996,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2093264503}
   - component: {fileID: 2093264504}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64314,7 +64083,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2099596135}
   - component: {fileID: 2099596136}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64552,7 +64321,7 @@ GameObject:
   - component: {fileID: 2108712552}
   - component: {fileID: 2108712553}
   - component: {fileID: 2108712554}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_66 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64685,7 +64454,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2112475519}
   - component: {fileID: 2112475520}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: splash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64772,7 +64541,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2114622004}
   - component: {fileID: 2114622005}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64859,7 +64628,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2124978490}
   - component: {fileID: 2124978491}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_19 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64947,7 +64716,7 @@ GameObject:
   - component: {fileID: 2128789186}
   - component: {fileID: 2128789187}
   - component: {fileID: 2128789188}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_66 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65079,7 +64848,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2129891359}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: railing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65115,17 +64884,6 @@ Transform:
   - {fileID: 1527237216}
   m_Father: {fileID: 1941949817}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2130765097 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5186541073136368916, guid: a32bd635f47099f4bb4858bf5eaf0c34, type: 3}
-  m_PrefabInstance: {fileID: 304161140}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1c59be31eac0fe4c809d20c6f6dbc4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2137891211
 GameObject:
   m_ObjectHideFlags: 0
@@ -65223,7 +64981,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2143172897}
   - component: {fileID: 2143172898}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: tilemap_19 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65310,7 +65068,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2146004866}
   - component: {fileID: 2146004867}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colored-transparent_833
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65397,7 +65155,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2146093590}
   - component: {fileID: 2146093591}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spider spritesheet flipped_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65527,8 +65285,3 @@ SceneRoots:
   - {fileID: 796194627}
   - {fileID: 174029263}
   - {fileID: 624548288}
-  - {fileID: 948820900}
-  - {fileID: 129032662}
-  - {fileID: 1088894521}
-  - {fileID: 304161140}
-  - {fileID: 605311455}
