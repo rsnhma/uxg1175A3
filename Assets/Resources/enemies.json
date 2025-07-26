@@ -21,6 +21,6 @@
     "speed": 4.0,
     "health": 10,
     "damageToPlayer": 2.0,
-    "behavior": "DodgeAttacks"
+    "behavior": "Armor"
   }
 ]
