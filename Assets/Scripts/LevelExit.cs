@@ -4,9 +4,7 @@ using UnityEngine.SceneManagement;
 public class LevelExit : MonoBehaviour
 {
     [Header("Optional")]
-    public GameObject gameOverUI; // Assign if you have a UI popup (Canvas)
-
-
+    public GameObject levelCompleteUI; // assign a different canvas here
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -16,14 +14,13 @@ public class LevelExit : MonoBehaviour
         {
             Debug.Log("Player has the keycard. Level complete!");
 
-            if (gameOverUI != null)
+            if (levelCompleteUI != null)
             {
-                gameOverUI.SetActive(true);
-                Time.timeScale = 0f; // pause game
+                levelCompleteUI.SetActive(true);
+                Time.timeScale = 0f;
             }
             else
             {
-                // Or just load next level immediately
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }
