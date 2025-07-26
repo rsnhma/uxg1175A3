@@ -4234,6 +4234,7 @@ GameObject:
   - component: {fileID: 705616208}
   - component: {fileID: 705616210}
   - component: {fileID: 705616209}
+  - component: {fileID: 705616211}
   m_Layer: 7
   m_Name: background overlay
   m_TagString: Untagged
@@ -5176,6 +5177,44 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &705616211
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705616207}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
 --- !u!1 &769348307
 GameObject:
   m_ObjectHideFlags: 0
@@ -6913,6 +6952,7 @@ GameObject:
   - component: {fileID: 1097809957}
   - component: {fileID: 1097809959}
   - component: {fileID: 1097809958}
+  - component: {fileID: 1097809960}
   m_Layer: 7
   m_Name: 'border background '
   m_TagString: Untagged
@@ -7651,6 +7691,44 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &1097809960
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097809956}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
 --- !u!1 &1137785057
 GameObject:
   m_ObjectHideFlags: 0
@@ -9894,17 +9972,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: rat
       objectReference: {fileID: 0}
-    - target: {fileID: 5866410963029039554, guid: 9dec674093a1b3245bbd0d4c9ff52bd9, type: 3}
-      propertyPath: m_AnchorMax.x
+    - target: {fileID: 2054411748608053415, guid: 9dec674093a1b3245bbd0d4c9ff52bd9, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5866410963029039554, guid: 9dec674093a1b3245bbd0d4c9ff52bd9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866410963029039554, guid: 9dec674093a1b3245bbd0d4c9ff52bd9, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6205722021706871830, guid: 9dec674093a1b3245bbd0d4c9ff52bd9, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7161360384478793392, guid: 9dec674093a1b3245bbd0d4c9ff52bd9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7168687401807465711, guid: 9dec674093a1b3245bbd0d4c9ff52bd9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11309,23 +11395,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2532487823591306113, guid: 4c3cae69ea7fee14190b364412fbdf35, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5042005351726136994, guid: 4c3cae69ea7fee14190b364412fbdf35, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5042005351726136994, guid: 4c3cae69ea7fee14190b364412fbdf35, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6500440973975094995, guid: 4c3cae69ea7fee14190b364412fbdf35, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.5593219
+      value: 9.22
       objectReference: {fileID: 0}
     - target: {fileID: 6500440973975094995, guid: 4c3cae69ea7fee14190b364412fbdf35, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.11548257
+      value: 1.89
       objectReference: {fileID: 0}
     - target: {fileID: 6500440973975094995, guid: 4c3cae69ea7fee14190b364412fbdf35, type: 3}
       propertyPath: m_LocalPosition.z
