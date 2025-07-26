@@ -11,6 +11,9 @@ public class RatBehaviour : EnemyBehaviour
 
     public Animator animator;
 
+    [Header("Awareness UI")]
+    public GameObject exclamationMark;
+
     protected override void UpdateTargetDirection()
     {
         if (awareness.AwareOfPlayer)
@@ -21,13 +24,18 @@ public class RatBehaviour : EnemyBehaviour
                 boosted = true;
                 Debug.Log("Rat spotted player! Speed boosted.");
             }
-
             targetDirection = awareness.DirectionToPlayer;
+
+            if (exclamationMark != null && !exclamationMark.activeSelf)
+                exclamationMark.SetActive(true);
         }
         else
         {
             HandleRoam();
             targetDirection = roamDirection;
+
+            if (exclamationMark != null && exclamationMark.activeSelf)
+                exclamationMark.SetActive(false);
         }
 
         if (targetDirection.magnitude > 0.01f)

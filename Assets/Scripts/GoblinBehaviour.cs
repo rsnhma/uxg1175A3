@@ -12,6 +12,7 @@ public class GoblinBehaviour : EnemyBehaviour
 
     public Animator animator;
 
+    public GameObject exclamationMark;
     protected override void UpdateTargetDirection()
     {
         if (isStriking || isStunned)
@@ -23,11 +24,17 @@ public class GoblinBehaviour : EnemyBehaviour
         if (awareness.AwareOfPlayer)
         {
             targetDirection = awareness.DirectionToPlayer;
+
+            if (exclamationMark != null && !exclamationMark.activeSelf)
+                exclamationMark.SetActive(true);
         }
         else
         {
             HandleRoam();
             targetDirection = roamDirection;
+
+            if (exclamationMark != null && exclamationMark.activeSelf)
+                exclamationMark.SetActive(false);
         }
 
         if (targetDirection.magnitude > 0.01f)
