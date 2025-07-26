@@ -42,6 +42,7 @@ public class EnemyBehaviour : MonoBehaviour
         health = maxHealth;
         UpdateHealthBar();
         PickNewRoamDirection();
+  
     }
 
     private void FixedUpdate()
