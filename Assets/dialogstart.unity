@@ -1085,7 +1085,6 @@ GameObject:
   - component: {fileID: 183797359}
   - component: {fileID: 183797362}
   - component: {fileID: 183797361}
-  - component: {fileID: 183797363}
   m_Layer: 5
   m_Name: dialoguepanel
   m_TagString: Untagged
@@ -1150,28 +1149,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 183797358}
   m_CullTransparentMesh: 1
---- !u!114 &183797363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 183797358}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7a002a3a3c05e945a07609d4973d783, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialoguetext: {fileID: 1672847844}
-  lines:
-  - 'v v dsefv sedfv dfvc sdwev '
-  - xcsdc dwsc dv dwsv d
-  textSpeed: 0.2
-  dialogueTyping: {fileID: 0}
-  dialoguepanel: {fileID: 183797361}
-  panel:
-  - {fileID: -8986094497021107824, guid: 6e101bcec44f0074d8224a004147ce1e, type: 3}
-  - {fileID: 7653717014571288591, guid: 28c199a057bf51148adb9e49e9ab70dd, type: 3}
 --- !u!1 &185628594
 GameObject:
   m_ObjectHideFlags: 0
