@@ -3822,7 +3822,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1206837120}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11982,7 +11982,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1206837120}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12004,7 +12004,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4392157, g: 0.4392157, b: 0.4862745, a: 1}
+  m_Color: {r: 0.7283019, g: 0.52630115, b: 0.52630115, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -15187,7 +15187,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1579639338
 RectTransform:
   m_ObjectHideFlags: 0
@@ -43170,7 +43170,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1206837120}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -43192,7 +43192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4392157, g: 0.4392157, b: 0.4862745, a: 1}
+  m_Color: {r: 0.7283019, g: 0.52630115, b: 0.52630115, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -43647,7 +43647,7 @@ MonoBehaviour:
   lines:
   - 'Attention. No one is allowed to leave the premises until every creature is killed. '
   textSpeed: 0.05
-  dialogueTyping: {fileID: 8300000, guid: e75df5cd9c1f944ce99e585d983fa119, type: 3}
+  dialogueTyping: {fileID: 8300000, guid: 5f134bf0c81e46b469ab32d03e059576, type: 3}
   dialoguepanel: {fileID: 740642517}
   panel:
   - {fileID: 7965824745040524822, guid: e98a902b032b4cc4486c429273450a0c, type: 3}
@@ -43679,7 +43679,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 5.37, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1206837120}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -43701,7 +43701,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4399501, g: 0.4399501, b: 0.4867924, a: 1}
+  m_Color: {r: 0.7283019, g: 0.52630115, b: 0.52630115, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
