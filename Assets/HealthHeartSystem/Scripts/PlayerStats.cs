@@ -50,24 +50,24 @@ public class PlayerStats : MonoBehaviour
 
             if (onHealthChangedCallback != null)
                 onHealthChangedCallback.Invoke();
-        }   
+        }
     }
 
     void ClampHealth()
-{
-    health = Mathf.Clamp(health, 0, maxHealth);
-
-    if (onHealthChangedCallback != null)
-        onHealthChangedCallback.Invoke();
-
- 
-    if (health <= 0)
     {
-        GameManager gm = FindObjectOfType<GameManager>();
-        if (gm != null)
+        health = Mathf.Clamp(health, 0, maxHealth);
+
+        if (onHealthChangedCallback != null)
+            onHealthChangedCallback.Invoke();
+
+
+        if (health <= 0)
         {
-            gm.TriggerGameOver();
+            GameManager gm = FindObjectOfType<GameManager>();
+            if (gm != null)
+            {
+                gm.TriggerGameOver();
+            }
         }
     }
-}
 }
