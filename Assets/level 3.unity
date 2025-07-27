@@ -38330,6 +38330,14 @@ PrefabInstance:
       propertyPath: keycardPrefab
       value: 
       objectReference: {fileID: 1276587147932953216, guid: 8b6b9e9a8f15ee140af517b1e04e5e6e, type: 3}
+    - target: {fileID: 7965590877733194794, guid: adc68f6e21ebe384183e3de586be76e8, type: 3}
+      propertyPath: wavesremaining
+      value: 
+      objectReference: {fileID: 2047187593}
+    - target: {fileID: 7965590877733194794, guid: adc68f6e21ebe384183e3de586be76e8, type: 3}
+      propertyPath: enemiesremaining
+      value: 
+      objectReference: {fileID: 1515526750}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -55819,7 +55827,7 @@ GameObject:
   - component: {fileID: 1515526751}
   - component: {fileID: 1515526750}
   m_Layer: 0
-  m_Name: Text (TMP) (1)
+  m_Name: enemiesremaining
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55864,7 +55872,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3339b9bc6c717664cad42a3d4f73f80e, type: 2}
   m_sharedMaterial: {fileID: 2540433490994748830, guid: 3339b9bc6c717664cad42a3d4f73f80e, type: 2}
@@ -66817,7 +66825,7 @@ GameObject:
   - component: {fileID: 2047187594}
   - component: {fileID: 2047187593}
   m_Layer: 0
-  m_Name: Text (TMP) (4)
+  m_Name: wavesremaining
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66862,7 +66870,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3339b9bc6c717664cad42a3d4f73f80e, type: 2}
   m_sharedMaterial: {fileID: 2540433490994748830, guid: 3339b9bc6c717664cad42a3d4f73f80e, type: 2}

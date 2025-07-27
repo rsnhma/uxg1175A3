@@ -4254,7 +4254,7 @@ GameObject:
   - component: {fileID: 375864737}
   - component: {fileID: 375864736}
   m_Layer: 0
-  m_Name: Text (TMP) (1)
+  m_Name: enemiesremaining
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4299,7 +4299,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3339b9bc6c717664cad42a3d4f73f80e, type: 2}
   m_sharedMaterial: {fileID: 2540433490994748830, guid: 3339b9bc6c717664cad42a3d4f73f80e, type: 2}
@@ -10201,6 +10201,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 849121978}
   m_CullTransparentMesh: 1
+--- !u!1 &859080891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 859080893}
+  - component: {fileID: 859080892}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &859080892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859080891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1408ec251c06ec4d86e3f06b9d7da5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverUI: {fileID: 49252366}
+--- !u!4 &859080893
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859080891}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.9495425, y: 0.1397663, z: -0.0033952855}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &861344672
 GameObject:
   m_ObjectHideFlags: 0
@@ -20552,7 +20597,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1790974544
 RectTransform:
   m_ObjectHideFlags: 0
@@ -46812,7 +46857,7 @@ GameObject:
   - component: {fileID: 1921475647}
   - component: {fileID: 1921475646}
   m_Layer: 0
-  m_Name: Text (TMP) (4)
+  m_Name: wavesremaining
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46857,7 +46902,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3339b9bc6c717664cad42a3d4f73f80e, type: 2}
   m_sharedMaterial: {fileID: 2540433490994748830, guid: 3339b9bc6c717664cad42a3d4f73f80e, type: 2}
@@ -47623,6 +47668,7 @@ GameObject:
   - component: {fileID: 1997222472}
   - component: {fileID: 1997222474}
   - component: {fileID: 1997222473}
+  - component: {fileID: 1997222475}
   m_Layer: 0
   m_Name: enemy counter
   m_TagString: Untagged
@@ -47693,6 +47739,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1997222471}
   m_CullTransparentMesh: 1
+--- !u!114 &1997222475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997222471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db7f75436d0d0754c9413ffbd687b3b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawner: {fileID: 750983787}
+  keycardPrefab: {fileID: 0}
+  enemiesremaining: {fileID: 375864736}
+  wavesremaining: {fileID: 1921475646}
 --- !u!1 &1998959638
 GameObject:
   m_ObjectHideFlags: 0
@@ -50027,6 +50089,14 @@ PrefabInstance:
       propertyPath: keycardPrefab
       value: 
       objectReference: {fileID: 1276587147932953216, guid: 8b6b9e9a8f15ee140af517b1e04e5e6e, type: 3}
+    - target: {fileID: 7965590877733194794, guid: adc68f6e21ebe384183e3de586be76e8, type: 3}
+      propertyPath: wavesremaining
+      value: 
+      objectReference: {fileID: 1921475646}
+    - target: {fileID: 7965590877733194794, guid: adc68f6e21ebe384183e3de586be76e8, type: 3}
+      propertyPath: enemiesremaining
+      value: 
+      objectReference: {fileID: 375864736}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -50282,4 +50352,5 @@ SceneRoots:
   - {fileID: 1338101215}
   - {fileID: 909949532}
   - {fileID: 1976048217}
+  - {fileID: 859080893}
   - {fileID: 529768297}
