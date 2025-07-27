@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 
 public class EnemyWaveManager : MonoBehaviour
@@ -18,6 +19,8 @@ public class EnemyWaveManager : MonoBehaviour
 
     public GameObject keycardPrefab;
 
+    public TextMeshProUGUI enemiesremaining;
+    public TextMeshProUGUI wavesremaining;
 
     private void Awake()
     {
@@ -71,6 +74,7 @@ public class EnemyWaveManager : MonoBehaviour
         currentLevelWaves = levelData.waves;
 
         Debug.Log("Starting level " + level + " with " + currentLevelWaves.Count + " waves.");
+        UpdateWaveCountUI();
         StartCoroutine(SpawnNextWave());
     }
 
@@ -84,9 +88,11 @@ public class EnemyWaveManager : MonoBehaviour
 
         WaveData wave = currentLevelWaves[currentWaveIndex];
         currentWaveIndex++;
+        UpdateWaveCountUI();
 
         int spawnCount = wave.count > 0 ? wave.count : Random.Range(wave.countMin, wave.countMax + 1);
         enemiesRemaining = spawnCount;
+        UpdateEnemyCountUI();
 
         Debug.Log($"Spawning Wave {wave.waveNumber} ({spawnCount} x {wave.enemyId})");
 
@@ -117,15 +123,34 @@ public class EnemyWaveManager : MonoBehaviour
         Debug.Log("NotifyEnemyDefeated called!");
 
         enemiesRemaining--;
+        UpdateEnemyCountUI();
         Debug.Log("Enemy defeated. Remaining: " + enemiesRemaining);
-
+       
         if (enemiesRemaining == 0 && currentWaveIndex >= currentLevelWaves.Count)
         {
             Debug.Log("All waves cleared, spawning keycard...");
             SpawnKeycardAt(enemyPosition);
         }
     }
-
+    private void UpdateEnemyCountUI()
+    {
+        if (enemiesremaining != null)
+        {
+            enemiesremaining.text = "" + enemiesRemaining;
+            Debug.Log("Updated enemy UI: " + enemiesRemaining);
+        }
+    }
+    private void UpdateWaveCountUI()
+    {
+        if (wavesremaining != null)
+        {
+            int wavesLeft = currentLevelWaves.Count - currentWaveIndex;
+            wavesremaining.text = "" + wavesLeft;
+            Debug.Log("Updated wave UI: " + wavesLeft);
+        }
+      
+    
+}
     bool CheckEnemyLowHealth(string enemyId, float threshold)
     {
         EnemyBehaviour[] allEnemies = FindObjectsOfType<EnemyBehaviour>();

@@ -9,18 +9,24 @@ using UnityEngine.EventSystems;
 
 public class DialogueManager : MonoBehaviour
 {
+    //how the text will appear, i can change fonts this way and refs the text layer 
     public TextMeshProUGUI dialoguetext;
 
    
-    [TextArea]
+    [TextArea] //an array of dialogue lines to implement in inspector
     public string[] lines;
+    //the delay between each char of the text appearing, lower the number lower the delay
     public float textSpeed;
 
-    public AudioClip dialogueTyping;
+    //sound that plays when each letter plays out
+    public AudioClip dialogueTyping; 
 
+    //the background music
     private AudioSource audioSource;
-
+   
+    //the image component in the ui category
     public Image dialoguepanel;
+    //array of images that i had imported into the assets folder 
     public Sprite[] panel;
 
     private int index;
