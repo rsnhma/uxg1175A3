@@ -7,7 +7,6 @@ public class SpiderBehaviour : EnemyBehaviour
     [Header("Spider Stats")]
     public float moveSpeed;
 
-    [Range(0f, 1f)]
     public float armorChance = 0.4f; // chance to activate armor when hit
     public float armorDuration = 1.0f;
     public int maxArmorUses = 4;
@@ -137,8 +136,7 @@ public class SpiderBehaviour : EnemyBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log($"Collision with {collision.gameObject.name}");
-
+  
         if (collision.gameObject.CompareTag("Player") && biteTimer <= 0f && !recoveringFromBite)
         {
             if (PlayerStats.Instance != null)
