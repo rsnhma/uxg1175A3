@@ -1,8 +1,4 @@
-﻿/*
- *  Author: ariel oliveira [o.arielg@gmail.com]
- */
-
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {

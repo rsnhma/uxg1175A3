@@ -114,11 +114,14 @@ public class EnemyWaveManager : MonoBehaviour
 
     public void NotifyEnemyDefeated(Vector3 enemyPosition)
     {
+        Debug.Log("NotifyEnemyDefeated called!");
+
         enemiesRemaining--;
         Debug.Log("Enemy defeated. Remaining: " + enemiesRemaining);
 
         if (enemiesRemaining == 0 && currentWaveIndex >= currentLevelWaves.Count)
         {
+            Debug.Log("All waves cleared, spawning keycard...");
             SpawnKeycardAt(enemyPosition);
         }
     }

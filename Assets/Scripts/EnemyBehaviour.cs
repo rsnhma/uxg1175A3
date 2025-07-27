@@ -149,7 +149,14 @@ public class EnemyBehaviour : MonoBehaviour
     {
         Debug.Log($"Enemy {enemyId} died at {transform.position}");
         if (EnemyWaveManager.Instance != null)
+        {
+            Debug.Log("Calling NotifyEnemyDefeated from Die()");
             EnemyWaveManager.Instance.NotifyEnemyDefeated(transform.position);
+        }
+        else
+        {
+            Debug.LogError("EnemyWaveManager.Instance is null!");
+        }
 
         Destroy(gameObject);
     }
