@@ -33,7 +33,9 @@ public class DialogueManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //clears dialogue 
         dialoguetext.text = string.Empty;
+        //starts coroutine (can suspend execution anytime)
         StartDialogue();
 
         audioSource = this.gameObject.AddComponent<AudioSource>();
@@ -43,9 +45,9 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if(Input.GetMouseButtonDown(0))
+       if(Input.GetMouseButtonDown(0)) //click
         {
-            if (dialoguetext.text == lines[index])
+            if (dialoguetext.text == lines[index]) //show entire dialogue in 1 index
             {
                 NextLine();
               
@@ -60,29 +62,35 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+
     void StartDialogue()
     {
         index = 0;
         dialoguepanel.sprite = panel[index];
         StartCoroutine(TypeLine());
     }
-
+    //typewriter effect
     IEnumerator TypeLine()
     {
+        //go through each character
         foreach (char c in lines[index].ToCharArray())
         {
+            //increase by 1 for each iteration
             dialoguetext.text += c;
+            //suspends the coroutine for textspeed amount of time 
             yield return new WaitForSeconds(textSpeed);
             audioSource.PlayOneShot(dialogueTyping);
 
         }
     }
 
+    //goes from one index to the next
     void NextLine()
     {
+        //if index is less than total amount of lines in array
         if (index < lines.Length - 1) 
         {
-            index++;
+            index++; //go to next array element
             dialoguetext.text = string.Empty;
             dialoguepanel.sprite = panel[index];
             StartCoroutine(TypeLine());
