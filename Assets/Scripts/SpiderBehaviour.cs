@@ -37,6 +37,11 @@ public class SpiderBehaviour : EnemyBehaviour
         if (armorText != null) armorText.SetActive(false);
         armorUsesLeft = maxArmorUses;
     }
+    private void Update()
+    {
+        if (biteTimer > 0f)
+            biteTimer -= Time.deltaTime;
+    }
 
     protected override void UpdateTargetDirection()
     {
@@ -127,11 +132,5 @@ public class SpiderBehaviour : EnemyBehaviour
             Debug.Log("Player took 2 damage from Spider");
             biteTimer = biteCooldown;
         }
-    }
-
-    private void Update()
-    {
-        if (biteTimer > 0f)
-            biteTimer -= Time.deltaTime;
     }
 }
