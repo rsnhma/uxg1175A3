@@ -97,13 +97,13 @@ public class EnemyBehaviour : MonoBehaviour
         {
             if (!awareness.AwareOfPlayer)
             {
-                // Roaming & hit a wall ? pick new roam direction
+   
                 PickNewRoamDirection();
                 return;
             }
             else
             {
-                // Chasing & blocked ? stop for now (or add smart logic later)
+
                 rb.linearVelocity = Vector2.zero;
                 return;
             }
