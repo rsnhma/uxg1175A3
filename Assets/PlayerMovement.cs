@@ -89,6 +89,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (Time.timeScale == 0f) return;    
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.y = Input.GetAxisRaw("Vertical");
 
@@ -156,6 +157,8 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+         if (Time.timeScale == 0f) return; 
+        
         float currentSpeed = moveSpeed;
         if (speedAbility != null)
             currentSpeed = speedAbility.GetCurrentSpeed();
