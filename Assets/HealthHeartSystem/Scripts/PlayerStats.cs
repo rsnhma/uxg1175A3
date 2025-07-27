@@ -39,7 +39,11 @@ public class PlayerStats : MonoBehaviour
     {
         health -= dmg;
         ClampHealth();
+
+        if (GameStatsManager.Instance != null)
+            GameStatsManager.Instance.AddDamage(dmg);
     }
+
 
     public void AddHealth()
     {
