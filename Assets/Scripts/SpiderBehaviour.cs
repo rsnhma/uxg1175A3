@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SpiderBehaviour : EnemyBehaviour
@@ -19,6 +21,8 @@ public class SpiderBehaviour : EnemyBehaviour
     [Header("Player Bite")]
     public float biteCooldown = 2f;
     private float biteTimer = 0f;
+
+    private bool recoveringFromBite = false;
 
     [Header("Visuals")]
     public SpriteRenderer spriteRenderer; // assign in Inspector
@@ -45,6 +49,13 @@ public class SpiderBehaviour : EnemyBehaviour
 
     protected override void UpdateTargetDirection()
     {
+        if (recoveringFromBite)
+        {
+            targetDirection = Vector2.zero;
+            rb.linearVelocity = Vector2.zero;
+            animator.speed = 0f;
+            return;
+        }
         if (isArmored)
         {
             armorTimer -= Time.deltaTime;
@@ -124,13 +135,32 @@ public class SpiderBehaviour : EnemyBehaviour
         base.TakeDamage(amount);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (other.CompareTag("Player") && biteTimer <= 0f)
+        Debug.Log($"Collision with {collision.gameObject.name}");
+
+        if (collision.gameObject.CompareTag("Player") && biteTimer <= 0f && !recoveringFromBite)
         {
-            PlayerStats.Instance.TakeDamage(2f);
-            Debug.Log("Player took 2 damage from Spider");
+            if (PlayerStats.Instance != null)
+            {
+                PlayerStats.Instance.TakeDamage(2f);
+                Debug.Log("Player took 2 damage from Spider");
+            }
+            else
+            {
+                Debug.LogWarning("PlayerStats.Instance is null!");
+            }
+
             biteTimer = biteCooldown;
+            StartCoroutine(BiteCooldown());
         }
+    }
+
+
+    private IEnumerator BiteCooldown()
+    {
+        recoveringFromBite = true;
+        yield return new WaitForSeconds(1f); // Stop chasing for 1 second
+        recoveringFromBite = false;
     }
 }
