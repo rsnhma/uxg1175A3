@@ -1,11 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class secondstage : MonoBehaviour
+public class thirdstage : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadSceneAsync(7);
+        SceneManager.LoadSceneAsync(8);
     }
 
     public void LoadMenu()

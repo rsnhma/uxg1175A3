@@ -84,7 +84,7 @@ public class DialogueManager : MonoBehaviour
         else
         {
             gameObject.SetActive(false);
-            SceneManager.LoadSceneAsync(4);
+            SceneManager.LoadSceneAsync(5);
         }
     }
   

@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelSelection.unity
     guid: 1143228128d9d1745b86d50a81258adc
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/CharWeapSelection.unity
     guid: 5cbf965f7d9b01840a656503d128edec
   - enabled: 1
@@ -29,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/level 2.unity
     guid: 64146a3ac13ec4cc1bcd470a75872f42
+  - enabled: 1
+    path: Assets/level 3.unity
+    guid: d956c24ec45ad264a98dd0edb41fe322
   - enabled: 0
     path: Assets/Scenes/MainGame.unity
     guid: 83002a67e34ebb943a60e566f169b2a9
