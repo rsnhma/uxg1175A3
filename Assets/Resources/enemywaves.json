@@ -4,7 +4,7 @@
     "waves": [
       { "waveNumber": 1, "enemyId": "rat", "count": 2 },
       { "waveNumber": 2, "enemyId": "rat", "countMin": 3, "countMax": 4 },
-      { "waveNumber": 3, "enemyId": "rat", "countMin": 4, "countMax": 5 }
+      { "waveNumber": 3, "enemyId": "rat", "countMin": 3, "countMax": 5 }
     ]
   },
   {
@@ -12,7 +12,7 @@
     "waves": [
       { "waveNumber": 1, "enemyId": "goblin", "count":3 },
       { "waveNumber": 2, "enemyId": "goblin", "countMin": 2, "countMax": 4 },
-      { "waveNumber": 3, "enemyId": "goblin", "countMin": 4, "countMax":5  }
+      { "waveNumber": 3, "enemyId": "goblin", "countMin": 2, "countMax":5  }
     ]
   },
   {
@@ -20,7 +20,7 @@
     "waves": [
       { "waveNumber": 1, "enemyId": "spider", "count": 3 },
       { "waveNumber": 2, "enemyId": "spider", "countMin": 2, "countMax": 4 },
-      { "waveNumber": 3, "enemyId": "spider", "countMin": 4, "countMax": 5 }
+      { "waveNumber": 3, "enemyId": "spider", "countMin": 2, "countMax": 5 }
     ]
   }
 ]

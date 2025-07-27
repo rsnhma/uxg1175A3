@@ -5,12 +5,12 @@ using UnityEngine;
 public class SpiderBehaviour : EnemyBehaviour
 {
     [Header("Spider Stats")]
-    public float moveSpeed = 3.0f;
+    public float moveSpeed;
 
     [Range(0f, 1f)]
     public float armorChance = 0.4f; // chance to activate armor when hit
-    public float armorDuration = 2.0f;
-    public int maxArmorUses = 5;
+    public float armorDuration = 1.0f;
+    public int maxArmorUses = 4;
 
     private bool isArmored = false;
     private float armorTimer = 0f;
@@ -19,17 +19,17 @@ public class SpiderBehaviour : EnemyBehaviour
     public Animator animator;
 
     [Header("Player Bite")]
-    public float biteCooldown = 2f;
+    public float biteCooldown;
     private float biteTimer = 0f;
 
     private bool recoveringFromBite = false;
 
     [Header("Visuals")]
-    public SpriteRenderer spriteRenderer; // assign in Inspector
+    public SpriteRenderer spriteRenderer; 
     public Color armoredColor = Color.black;
     private Color originalColor;
 
-    public GameObject armorText; // UI text or exclamation icon for armor
+    public GameObject armorText; // UI text 
 
     [Header("Awareness UI")]
     public GameObject exclamationMark;
