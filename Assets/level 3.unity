@@ -35034,7 +35034,7 @@ Transform:
   m_GameObject: {fileID: 415818691}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.55, y: 3.67, z: -0.058785353}
+  m_LocalPosition: {x: 6.01, y: 3.67, z: -0.058785353}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -47605,6 +47605,73 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1150440724
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1150440726}
+  - component: {fileID: 1150440725}
+  m_Layer: 0
+  m_Name: WeaponUIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1150440725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1150440724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cfe5a3f3ad84fb409a06a3813cae342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gunUI: {fileID: 2126083984}
+  daggerUI: {fileID: 1782918883}
+  potionUI: {fileID: 759516285}
+  beamUI: {fileID: 2138929169}
+  gunAmmoSlots:
+  - {fileID: 2114530096}
+  - {fileID: 281533455}
+  - {fileID: 392584398}
+  - {fileID: 202716336}
+  - {fileID: 1342218905}
+  daggerAmmoSlots:
+  - {fileID: 597851346}
+  - {fileID: 275732047}
+  - {fileID: 80087459}
+  - {fileID: 767169537}
+  - {fileID: 1234536083}
+  potionAmmoSlots:
+  - {fileID: 1510293002}
+  - {fileID: 82960871}
+  - {fileID: 118631781}
+  - {fileID: 299762206}
+  - {fileID: 1366299404}
+  beamCooldownSlider: {fileID: 1886898239}
+--- !u!4 &1150440726
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1150440724}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.838432, y: -0.8565706, z: -0.021871516}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1162199879
 GameObject:
   m_ObjectHideFlags: 0
@@ -62154,7 +62221,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1782918884
 RectTransform:
   m_ObjectHideFlags: 0
@@ -64033,7 +64100,7 @@ GameObject:
   - component: {fileID: 1915063647}
   - component: {fileID: 1915063649}
   - component: {fileID: 1915063648}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 'border background '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65210,6 +65277,7 @@ MonoBehaviour:
   - {fileID: 3401142080922124520, guid: 8f26ef16224f763468a4188f43e5c30f, type: 3}
   spawnPoint: {fileID: 415818692}
   facingDirectionForSpawn: {x: 1, y: 0}
+  weaponUIManager: {fileID: 1150440725}
 --- !u!4 &1934673531
 Transform:
   m_ObjectHideFlags: 0
@@ -69572,7 +69640,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2126083985
 RectTransform:
   m_ObjectHideFlags: 0
@@ -70312,3 +70380,4 @@ SceneRoots:
   - {fileID: 1548157839}
   - {fileID: 116615441}
   - {fileID: 2125758037}
+  - {fileID: 1150440726}
