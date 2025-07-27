@@ -33506,7 +33506,6 @@ GameObject:
   - component: {fileID: 598806349}
   - component: {fileID: 598806352}
   - component: {fileID: 598806351}
-  - component: {fileID: 598806350}
   m_Layer: 0
   m_Name: enemy counter
   m_TagString: Untagged
@@ -33539,22 +33538,6 @@ RectTransform:
   m_AnchoredPosition: {x: 271, y: 407}
   m_SizeDelta: {x: 100, y: 202.9}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &598806350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 598806348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db7f75436d0d0754c9413ffbd687b3b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawner: {fileID: 0}
-  keycardPrefab: {fileID: 0}
-  enemiesremaining: {fileID: 95401361}
-  wavesremaining: {fileID: 351902846}
 --- !u!114 &598806351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36618,11 +36601,11 @@ PrefabInstance:
     - target: {fileID: 7965590877733194794, guid: adc68f6e21ebe384183e3de586be76e8, type: 3}
       propertyPath: wavesremaining
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 351902846}
     - target: {fileID: 7965590877733194794, guid: adc68f6e21ebe384183e3de586be76e8, type: 3}
       propertyPath: enemiesremaining
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 95401361}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
