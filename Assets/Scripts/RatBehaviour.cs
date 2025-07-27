@@ -14,6 +14,11 @@ public class RatBehaviour : EnemyBehaviour
     [Header("Awareness UI")]
     public GameObject exclamationMark;
 
+    protected override void Awake()
+    {
+        base.Awake();
+        enemyId = "rat";
+    }
     protected override void UpdateTargetDirection()
     {
         if (awareness.AwareOfPlayer)

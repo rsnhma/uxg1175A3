@@ -72,7 +72,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.09, y: 1.77}
+  m_AnchoredPosition: {x: 0.09, y: 1.6}
   m_SizeDelta: {x: 9.9486, y: 13.8521}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &8245849146589808339
@@ -254,7 +254,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 960
   obstacleCheckDistance: 0.5
-  moveSpeed: 2
+  moveSpeed: 1
   animator: {fileID: 5062805400613331786}
   exclamationMark: {fileID: 6205722021706871830}
 --- !u!114 &4336662008038554009
