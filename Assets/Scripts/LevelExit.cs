@@ -4,22 +4,27 @@ using UnityEngine.SceneManagement;
 public class LevelExit : MonoBehaviour
 {
     [Header("UI References")]
-    public GameObject levelCompleteUI;   // Assigned in Inspector
-    public GameObject keycardWarningUI;  // <-- NEW: Assign your "Need keycard" popup
-    public float warningDuration = 2f;   // Time to show the warning popup
+    public GameObject levelCompleteUI;    // Shows when level is complete
+    public GameObject keycardWarningUI;   // Shows when trying to exit without keycard
+
+    private bool levelCompleted = false;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
 
+        if (levelCompleted) return; // prevent re-enter
+
         if (KeycardPickup.hasKeycard)
         {
             Debug.Log("Player has the keycard. Level complete!");
+            levelCompleted = true;
+            GetComponent<BoxCollider2D>().enabled = false;
 
             if (levelCompleteUI != null)
             {
                 levelCompleteUI.SetActive(true);
-                Time.timeScale = 0f;
+                Time.timeScale = 0f; // pause game
             }
             else
             {
@@ -28,22 +33,21 @@ public class LevelExit : MonoBehaviour
         }
         else
         {
-            Debug.Log("Exit locked. Find the keycard first!");
+            Debug.Log("Exit locked. Player needs keycard.");
 
             if (keycardWarningUI != null)
             {
                 keycardWarningUI.SetActive(true);
-                CancelInvoke(nameof(HideWarning)); // prevent overlap
-                Invoke(nameof(HideWarning), warningDuration);
+
+                // Optional: auto-hide after 2 seconds
+                Invoke(nameof(HideKeycardWarning), 2f);
             }
         }
     }
 
-    void HideWarning()
+    void HideKeycardWarning()
     {
         if (keycardWarningUI != null)
-        {
             keycardWarningUI.SetActive(false);
-        }
     }
 }
