@@ -7,6 +7,8 @@ public class CharacterSpawner : MonoBehaviour
     public Transform spawnPoint;              // Where the player should spawn
     public Vector2 facingDirectionForSpawn = new Vector2(1, 0); // Default face right
 
+    public WeaponUIManager weaponUIManager;
+
     void Start()
     {
         int index = CharManager.SelectedIndex;
@@ -15,7 +17,9 @@ public class CharacterSpawner : MonoBehaviour
         {
             // Instantiate the selected character prefab
             GameObject player = Instantiate(characterPrefabs[index], spawnPoint.position, Quaternion.identity);
-             if (GameManager.Instance != null)
+            PlayerMovement playerMovement = player.GetComponent<PlayerMovement>();
+
+            if (GameManager.Instance != null)
             {
                 GameManager.Instance.SetPlayer(player);
             }
@@ -32,6 +36,11 @@ public class CharacterSpawner : MonoBehaviour
             if (camFollow != null)
             {
                 camFollow.target = player.transform;
+            }
+
+            if (playerMovement != null)
+            {
+                playerMovement.weaponUIManager = weaponUIManager;
             }
         }
         else

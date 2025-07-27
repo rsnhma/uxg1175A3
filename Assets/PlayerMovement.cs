@@ -11,16 +11,18 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 moveInput;
     public Vector2 lastMoveDir;
 
+    public Vector2 startFacingDirection = new Vector2(0, -1);
+
     private Character3Ability speedAbility;
 
-    // Handgun (bullets)
+    // handgun 
     public Transform weaponHoldPoint;
     private SpriteRenderer weaponRenderer;
     public GameObject bulletPrefab;
     public Transform bulletBarrelExit;
     public GameObject handgunObject;
 
-    // Beam gun
+    // beam ray
     public Transform beamWeaponHoldPoint;
     private SpriteRenderer beamWeaponRenderer;
     public Transform beamBarrelExit;
@@ -28,41 +30,43 @@ public class PlayerMovement : MonoBehaviour
     public GameObject beamgunObject;
     private GameObject currentBeam;
 
+    // potion 
+    public GameObject potionPrefab;
+    public Transform throwPoint;
+
+    // dagger
+    public GameObject daggerPrefab;
+    public Transform throwPoint1;
+
     private enum WeaponType { Handgun, Beam, Potion, Dagger }
     private WeaponType currentWeapon = WeaponType.Handgun;
 
-    // Bullet ammo & cooldown
+    // bullet ammo & cooldown
     private int bulletShotsLeft = 5;
-    private float bulletCooldownTimer = 0f;
+    private float bulletCooldownTimer = 5f;
     private bool bulletOnCooldown = false;
 
-    // Beam hold & cooldown
-    private float beamHoldTime = 0f;
-    private float beamCooldownTimer = 0f;
+    // beam ray hold & cooldown
+    private float beamHoldTime = 5f;
+    private float beamCooldownTimer = 5f;
     private bool beamOnCooldown = false;
     private bool beamIsFiring = false;
 
-    // Potion Throwing
-    public GameObject potionPrefab;
-    public Transform throwPoint;
-    public float throwForce = 10f;
-
-    // Potion throwing cooldown
+    // potion throwing & cooldown
+    public float throwForce = 5f;
     private int potionThrowsLeft = 5;
-    private float potionCooldownTimer = 0f;
+    private float potionCooldownTimer = 5f;
     private bool potionOnCooldown = false;
 
-    // Dagger Throwing
-    public GameObject daggerPrefab;
-    public Transform throwPoint1;
-    public float throwForce1 = 10f;
-
-    // Dagger throwing cooldown
+    // dagger throwing & cooldown
+    public float throwForce1 = 5f;
     private int daggerThrowsLeft = 5;
-    private float daggerCooldownTimer = 0f;
+    private float daggerCooldownTimer = 5f;
     private bool daggerOnCooldown = false;
 
-    public Vector2 startFacingDirection = new Vector2(0, -1);
+    // UI reference
+    public WeaponUIManager weaponUIManager;
+
 
     void Start()
     {
@@ -74,13 +78,13 @@ public class PlayerMovement : MonoBehaviour
         if (beamWeaponHoldPoint != null)
             beamWeaponRenderer = beamWeaponHoldPoint.GetComponentInChildren<SpriteRenderer>();
 
-        
+
         if (startFacingDirection != Vector2.zero)
             lastMoveDir = startFacingDirection.normalized;
         else
-            lastMoveDir = new Vector2(0, -1); // fallback default
+            lastMoveDir = new Vector2(0, -1); // default
 
-        UpdateWeaponDirection();
+        UpdateHandgunWeaponDirection();
         UpdateBeamWeaponDirection();
         SwitchWeaponVisuals();
     }
@@ -89,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (Time.timeScale == 0f) return;    
+        if (Time.timeScale == 0f) return;
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.y = Input.GetAxisRaw("Vertical");
 
@@ -101,7 +105,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("lastMoveX", lastMoveDir.x);
             animator.SetFloat("lastMoveY", lastMoveDir.y);
 
-            UpdateWeaponDirection();
+            UpdateHandgunWeaponDirection();
             UpdateBeamWeaponDirection();
         }
 
@@ -109,40 +113,45 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("moveY", moveInput.y);
         animator.SetBool("isMoving", moveInput != Vector2.zero);
 
-        // Weapon switching
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        // weapon switching
+        if (Input.GetKeyDown(KeyCode.Alpha1)) // select handgun
         {
             currentWeapon = WeaponType.Handgun;
             StopBeam(); // stop beam immediately if switching
             SwitchWeaponVisuals();
+            weaponUIManager?.UpdateSelectedWeaponUI("Handgun");
+
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (Input.GetKeyDown(KeyCode.Alpha2)) // select beam ray
         {
             currentWeapon = WeaponType.Beam;
-            StopBeam(); // just in case
+            StopBeam();
             SwitchWeaponVisuals();
+            weaponUIManager?.UpdateSelectedWeaponUI("Beam");
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha3)) // Select potion
+        if (Input.GetKeyDown(KeyCode.Alpha3)) // select potion
         {
             currentWeapon = WeaponType.Potion;
-            StopBeam(); // Just in case beam is active
+            StopBeam();
             SwitchWeaponVisuals();
+            weaponUIManager?.UpdateSelectedWeaponUI("Potion");
         }
 
 
-        if (Input.GetKeyDown(KeyCode.Alpha4)) // Select potion
+        if (Input.GetKeyDown(KeyCode.Alpha4)) // select dagger
         {
             currentWeapon = WeaponType.Dagger;
-            StopBeam(); // Just in case beam is active
+            StopBeam();
             SwitchWeaponVisuals();
+            weaponUIManager?.UpdateSelectedWeaponUI("Dagger");
         }
 
-        // Fire input
+        // fire input
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (currentWeapon == WeaponType.Handgun)
-                TryShootBullet();
+                ShootBullet();
             else if (currentWeapon == WeaponType.Beam)
                 StartBeam();
             else if (currentWeapon == WeaponType.Potion)
@@ -151,14 +160,14 @@ public class PlayerMovement : MonoBehaviour
                 ThrowDagger();
         }
 
-        HandleBeamHold();
-        HandleCooldowns();
+        BeamHold();
+        Cooldowns();
     }
 
     void FixedUpdate()
     {
-         if (Time.timeScale == 0f) return; 
-        
+        if (Time.timeScale == 0f) return;
+
         float currentSpeed = moveSpeed;
         if (speedAbility != null)
             currentSpeed = speedAbility.GetCurrentSpeed();
@@ -166,7 +175,7 @@ public class PlayerMovement : MonoBehaviour
         rb.MovePosition(rb.position + moveInput * currentSpeed * Time.fixedDeltaTime);
     }
 
-    void HandleCooldowns()
+    void Cooldowns()
     {
         if (bulletOnCooldown)
         {
@@ -175,6 +184,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 bulletShotsLeft = 5;
                 bulletOnCooldown = false;
+                weaponUIManager?.UpdateAmmo("Handgun", bulletShotsLeft, 5);
             }
         }
 
@@ -194,6 +204,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 potionThrowsLeft = 5;
                 potionOnCooldown = false;
+                weaponUIManager?.UpdateAmmo("Potion", potionThrowsLeft, 5);
             }
         }
 
@@ -204,19 +215,23 @@ public class PlayerMovement : MonoBehaviour
             {
                 daggerThrowsLeft = 5;
                 daggerOnCooldown = false;
+                weaponUIManager?.UpdateAmmo("Dagger", daggerThrowsLeft, 5);
             }
         }
+
+        weaponUIManager?.UpdateBeamCooldown(beamOnCooldown ? 1f - beamCooldownTimer / 5f : 1f);
+
     }
 
     public void SetInitialFacingDirection(Vector2 direction)
     {
         lastMoveDir = direction.normalized;
 
-        // Update animator so it shows the correct idle pose
+        // update animator so it shows the correct idle pose
         animator.SetFloat("lastMoveX", lastMoveDir.x);
         animator.SetFloat("lastMoveY", lastMoveDir.y);
 
-        UpdateWeaponDirection();
+        UpdateHandgunWeaponDirection();
         UpdateBeamWeaponDirection();
     }
 
@@ -227,7 +242,7 @@ public class PlayerMovement : MonoBehaviour
         if (beamgunObject != null) beamgunObject.SetActive(currentWeapon == WeaponType.Beam);
     }
 
-    void UpdateWeaponDirection()
+    void UpdateHandgunWeaponDirection()
     {
         if (weaponHoldPoint == null) return;
 
@@ -301,7 +316,7 @@ public class PlayerMovement : MonoBehaviour
             renderer.sortingOrder = order;
     }
 
-    void TryShootBullet()
+    void ShootBullet()
     {
         if (bulletOnCooldown) return;
         if (bulletShotsLeft <= 0)
@@ -312,6 +327,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         bulletShotsLeft--;
+        weaponUIManager?.UpdateAmmo("Handgun", bulletShotsLeft, 5);
 
         if (bulletPrefab == null || bulletBarrelExit == null) return;
 
@@ -325,6 +341,7 @@ public class PlayerMovement : MonoBehaviour
             bulletOnCooldown = true;
             bulletCooldownTimer = 5f;
         }
+
     }
 
     void StartBeam()
@@ -338,7 +355,19 @@ public class PlayerMovement : MonoBehaviour
             currentBeam = Instantiate(beamPrefab, beamBarrelExit.position, Quaternion.identity);
     }
 
-    void HandleBeamHold()
+    void StopBeam()
+    {
+        if (currentBeam != null)
+        {
+            Destroy(currentBeam);
+            currentBeam = null;
+        }
+
+        beamIsFiring = false;
+        beamHoldTime = 0f;
+    }
+
+    void BeamHold()
     {
         if (!beamIsFiring) return;
 
@@ -351,25 +380,25 @@ public class PlayerMovement : MonoBehaviour
 
             float maxDistance = 10f;
 
-            // Create a combined LayerMask for Border and Walls
+            // create a combined layerMask for border and walls
             LayerMask wallLayers = LayerMask.GetMask("Border", "Walls");
 
-            // Raycast for anything in the wallLayers
+            // raycast for anything in the wallLayers
             RaycastHit2D wallHit = Physics2D.Raycast(beamBarrelExit.position, lastMoveDir, maxDistance, wallLayers);
 
-            // Raycast for enemies (no layer mask so it hits anything)
+            // raycast for enemies (no layer mask so it hits anything)
             RaycastHit2D enemyHit = Physics2D.Raycast(beamBarrelExit.position, lastMoveDir, maxDistance);
 
             float wallDist = wallHit.collider != null ? wallHit.distance : maxDistance;
             float enemyDist = (enemyHit.collider != null && enemyHit.collider.CompareTag("Enemy")) ? enemyHit.distance : maxDistance;
 
-            // Use whichever hit is closer
+            // use whichever hit is closer
             float actualDistance = Mathf.Min(wallDist, enemyDist);
 
-            // Shorten beam to that distance
+            // shorten beam to that distance
             currentBeam.transform.localScale = new Vector3(actualDistance, currentBeam.transform.localScale.y, 1f);
 
-            // Debug line
+            // debug line
             Debug.DrawRay(beamBarrelExit.position, lastMoveDir * actualDistance, Color.red);
         }
 
@@ -379,20 +408,6 @@ public class PlayerMovement : MonoBehaviour
             beamOnCooldown = true;
             beamCooldownTimer = 5f;
         }
-    }
-
-
-
-    void StopBeam()
-    {
-        if (currentBeam != null)
-        {
-            Destroy(currentBeam);
-            currentBeam = null;
-        }
-
-        beamIsFiring = false;
-        beamHoldTime = 0f;
     }
 
     void ThrowPotion()
@@ -408,6 +423,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         potionThrowsLeft--;
+        weaponUIManager?.UpdateAmmo("Potion", potionThrowsLeft, 5);
 
         Vector2 throwDirection = lastMoveDir != Vector2.zero ? lastMoveDir.normalized : Vector2.right;
 
@@ -448,6 +464,8 @@ public class PlayerMovement : MonoBehaviour
         }
 
         daggerThrowsLeft--;
+        weaponUIManager?.UpdateAmmo("Dagger", daggerThrowsLeft, 5);
+
 
         Vector2 throwDirection = lastMoveDir != Vector2.zero ? lastMoveDir.normalized : Vector2.right;
 
@@ -460,10 +478,10 @@ public class PlayerMovement : MonoBehaviour
         float angle = Mathf.Atan2(throwDirection.y, throwDirection.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.Euler(0, 0, angle - 90f);
 
-        // Instantiate dagger with correct rotation
+        // instantiate dagger with correct rotation
         GameObject dagger = Instantiate(daggerPrefab, throwPoint1.position, rotation);
 
-        // Add force using the exact same throwDirection
+        // add force using the exact same throwDirection
         Rigidbody2D rb = dagger.GetComponent<Rigidbody2D>();
         Collider2D daggerCollider = dagger.GetComponent<Collider2D>();
         Collider2D playerCollider = GetComponent<Collider2D>();
@@ -480,6 +498,5 @@ public class PlayerMovement : MonoBehaviour
             daggerCooldownTimer = 5f;
         }
     }
-
 
 }

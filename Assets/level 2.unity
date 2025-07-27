@@ -3023,7 +3023,7 @@ GameObject:
   - component: {fileID: 257068409}
   - component: {fileID: 257068411}
   - component: {fileID: 257068410}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30883,7 +30883,7 @@ GameObject:
   - component: {fileID: 408353723}
   - component: {fileID: 408353725}
   - component: {fileID: 408353724}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: background overlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34009,7 +34009,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &649385027
 RectTransform:
   m_ObjectHideFlags: 0
@@ -37356,7 +37356,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &851325325
 RectTransform:
   m_ObjectHideFlags: 0
@@ -37928,6 +37928,73 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &915494234
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 915494236}
+  - component: {fileID: 915494235}
+  m_Layer: 0
+  m_Name: WeaponUIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &915494235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915494234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cfe5a3f3ad84fb409a06a3813cae342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gunUI: {fileID: 649385026}
+  daggerUI: {fileID: 851325324}
+  potionUI: {fileID: 996715323}
+  beamUI: {fileID: 2001071012}
+  gunAmmoSlots:
+  - {fileID: 1422697946}
+  - {fileID: 1368781689}
+  - {fileID: 794471183}
+  - {fileID: 641058734}
+  - {fileID: 717022645}
+  daggerAmmoSlots:
+  - {fileID: 1269158344}
+  - {fileID: 32044702}
+  - {fileID: 1504191952}
+  - {fileID: 1715528856}
+  - {fileID: 230656765}
+  potionAmmoSlots:
+  - {fileID: 901012522}
+  - {fileID: 1861328109}
+  - {fileID: 297975900}
+  - {fileID: 2109642134}
+  - {fileID: 1463846129}
+  beamCooldownSlider: {fileID: 1670891653}
+--- !u!4 &915494236
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915494234}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.838432, y: -0.8565706, z: -0.021871516}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &940056347
 GameObject:
   m_ObjectHideFlags: 0
@@ -41182,6 +41249,7 @@ MonoBehaviour:
   - {fileID: 3401142080922124520, guid: 8f26ef16224f763468a4188f43e5c30f, type: 3}
   spawnPoint: {fileID: 576265536}
   facingDirectionForSpawn: {x: 1, y: 0}
+  weaponUIManager: {fileID: 915494235}
 --- !u!4 &1126340033
 Transform:
   m_ObjectHideFlags: 0
@@ -51197,7 +51265,7 @@ GameObject:
   - component: {fileID: 1915063647}
   - component: {fileID: 1915063649}
   - component: {fileID: 1915063648}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 'border background '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54326,7 +54394,7 @@ GameObject:
   - component: {fileID: 2084213722}
   - component: {fileID: 2084213721}
   - component: {fileID: 2084213723}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tilemap border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56331,3 +56399,4 @@ SceneRoots:
   - {fileID: 1377742867}
   - {fileID: 1631162089}
   - {fileID: 1559914621}
+  - {fileID: 915494236}
