@@ -9972,25 +9972,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: rat
       objectReference: {fileID: 0}
-    - target: {fileID: 2054411748608053415, guid: 9dec674093a1b3245bbd0d4c9ff52bd9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5866410963029039554, guid: 9dec674093a1b3245bbd0d4c9ff52bd9, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5866410963029039554, guid: 9dec674093a1b3245bbd0d4c9ff52bd9, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6205722021706871830, guid: 9dec674093a1b3245bbd0d4c9ff52bd9, type: 3}
-      propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7161360384478793392, guid: 9dec674093a1b3245bbd0d4c9ff52bd9, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7168687401807465711, guid: 9dec674093a1b3245bbd0d4c9ff52bd9, type: 3}
       propertyPath: m_LocalPosition.x

@@ -125,13 +125,19 @@ public class EnemyWaveManager : MonoBehaviour
         enemiesRemaining--;
         UpdateEnemyCountUI();
         Debug.Log("Enemy defeated. Remaining: " + enemiesRemaining);
-       
+
+        if (GameSessionStats.Instance != null)
+        {
+            GameSessionStats.Instance.AddKill();
+        }
+
         if (enemiesRemaining == 0 && currentWaveIndex >= currentLevelWaves.Count)
         {
             Debug.Log("All waves cleared, spawning keycard...");
             SpawnKeycardAt(enemyPosition);
         }
     }
+
     private void UpdateEnemyCountUI()
     {
         if (enemiesremaining != null)

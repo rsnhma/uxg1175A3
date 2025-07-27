@@ -28,7 +28,7 @@ public class SpiderBehaviour : EnemyBehaviour
     public Color armoredColor = Color.black;
     private Color originalColor;
 
-    public GameObject armorText; // UI text 
+    public GameObject armorText;
 
     [Header("Awareness UI")]
     public GameObject exclamationMark;
@@ -75,10 +75,10 @@ public class SpiderBehaviour : EnemyBehaviour
         }
         else
         {
-            animator.speed = 1f; // resume anims if not armored
+            animator.speed = 1f; // resume anim if not armored
         }
 
-        // Chase or roam
+
         if (awareness.AwareOfPlayer)
         {
             targetDirection = awareness.DirectionToPlayer;
@@ -153,7 +153,6 @@ public class SpiderBehaviour : EnemyBehaviour
             StartCoroutine(BiteCooldown());
         }
     }
-
 
     private IEnumerator BiteCooldown()
     {
