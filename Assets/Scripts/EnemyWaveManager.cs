@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
-
+using System;
 
 public class EnemyWaveManager : MonoBehaviour
 {
@@ -46,7 +46,6 @@ public class EnemyWaveManager : MonoBehaviour
         Debug.LogError("Could not determine level from scene name: " + sceneName);
     }
 
-
     void LoadWaveData()
     {
         TextAsset json = Resources.Load<TextAsset>("enemywaves");
@@ -75,6 +74,10 @@ public class EnemyWaveManager : MonoBehaviour
 
         Debug.Log("Starting level " + level + " with " + currentLevelWaves.Count + " waves.");
         UpdateWaveCountUI();
+
+        if (GameStatsManager.Instance != null)
+            GameStatsManager.Instance.StartWaveTimer();
+
         StartCoroutine(SpawnNextWave());
     }
 
@@ -83,6 +86,13 @@ public class EnemyWaveManager : MonoBehaviour
         if (currentWaveIndex >= currentLevelWaves.Count)
         {
             Debug.Log("All waves cleared for this level!");
+
+            if (GameStatsManager.Instance != null)
+            {
+                GameStatsManager.Instance.EndWaveTimer();
+                GameStatsManager.Instance.SaveStatsToFile(); // Save when last wave finishes
+            }
+
             yield break;
         }
 
@@ -90,7 +100,7 @@ public class EnemyWaveManager : MonoBehaviour
         currentWaveIndex++;
         UpdateWaveCountUI();
 
-        int spawnCount = wave.count > 0 ? wave.count : Random.Range(wave.countMin, wave.countMax + 1);
+        int spawnCount = wave.count > 0 ? wave.count : UnityEngine.Random.Range(wave.countMin, wave.countMax + 1);
         enemiesRemaining = spawnCount;
         UpdateEnemyCountUI();
 
@@ -115,6 +125,14 @@ public class EnemyWaveManager : MonoBehaviour
             yield return null;
         }
 
+        // Wave is done
+        if (GameStatsManager.Instance != null)
+            GameStatsManager.Instance.EndWaveTimer();
+
+        // If more waves coming, start new timer
+        if (currentWaveIndex < currentLevelWaves.Count && GameStatsManager.Instance != null)
+            GameStatsManager.Instance.StartWaveTimer();
+
         StartCoroutine(SpawnNextWave());
     }
 
@@ -126,9 +144,9 @@ public class EnemyWaveManager : MonoBehaviour
         UpdateEnemyCountUI();
         Debug.Log("Enemy defeated. Remaining: " + enemiesRemaining);
 
-        if (GameSessionStats.Instance != null)
+        if (GameStatsManager.Instance != null)
         {
-            GameSessionStats.Instance.AddKill();
+            GameStatsManager.Instance.AddEnemyKill();
         }
 
         if (enemiesRemaining == 0 && currentWaveIndex >= currentLevelWaves.Count)
@@ -146,6 +164,7 @@ public class EnemyWaveManager : MonoBehaviour
             Debug.Log("Updated enemy UI: " + enemiesRemaining);
         }
     }
+
     private void UpdateWaveCountUI()
     {
         if (wavesremaining != null)
@@ -154,9 +173,8 @@ public class EnemyWaveManager : MonoBehaviour
             wavesremaining.text = "" + wavesLeft;
             Debug.Log("Updated wave UI: " + wavesLeft);
         }
-      
-    
-}
+    }
+
     bool CheckEnemyLowHealth(string enemyId, float threshold)
     {
         EnemyBehaviour[] allEnemies = FindObjectsOfType<EnemyBehaviour>();
@@ -181,6 +199,4 @@ public class EnemyWaveManager : MonoBehaviour
         Instantiate(keycardPrefab, position, Quaternion.identity);
         Debug.Log("Keycard spawned at enemy death location!");
     }
-
- 
 }
