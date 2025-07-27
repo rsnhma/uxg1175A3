@@ -413,20 +413,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyId: spider
   roamSpeed: 1
-  maxHealth: 10
-  health: 10
+  maxHealth: 8
+  health: 8
   damageToPlayer: 2
   healthBarSlider: {fileID: 5643837444425363783}
   obstacleLayers:
     serializedVersion: 2
     m_Bits: 448
   obstacleCheckDistance: 0.5
-  moveSpeed: 4
+  moveSpeed: 2
   armorChance: 0.4
   armorDuration: 2
   maxArmorUses: 5
   animator: {fileID: 7480765333064794137}
-  biteCooldown: 2
+  biteCooldown: 4
   spriteRenderer: {fileID: 1969725819018866959}
   armoredColor: {r: 0, g: 0, b: 0, a: 1}
   armorText: {fileID: 8466649357305904194}

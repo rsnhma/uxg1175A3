@@ -18,6 +18,7 @@ public class EnemyWaveManager : MonoBehaviour
 
     public GameObject keycardPrefab;
 
+
     private void Awake()
     {
         Instance = this;
@@ -97,11 +98,10 @@ public class EnemyWaveManager : MonoBehaviour
 
         if (wave.enemyId == "goblin" || wave.enemyId == "spider")
         {
-            while (!CheckEnemyLowHealth(wave.enemyId, 0.33f))
+            while (!CheckEnemyLowHealth(wave.enemyId, 1f))
             {
                 yield return null;
             }
-            Debug.Log($"{wave.enemyId} reached low health. Continuing.");
         }
 
         while (enemiesRemaining > 0)
@@ -151,4 +151,5 @@ public class EnemyWaveManager : MonoBehaviour
         Debug.Log("Keycard spawned at enemy death location!");
     }
 
+ 
 }

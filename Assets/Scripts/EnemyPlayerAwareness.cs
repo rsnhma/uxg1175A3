@@ -24,15 +24,6 @@ public class EnemyPlayerAwareness : MonoBehaviour
 
         AwareOfPlayer = toPlayer.magnitude <= playerAwarenessDistance;
 
-        if (AwareOfPlayer)
-        {
-            Debug.DrawLine(transform.position, player.position, Color.red);
-        }
-        else
-        {
-            Debug.DrawLine(transform.position, player.position, Color.gray);
-        }
-
 
     }
 }
